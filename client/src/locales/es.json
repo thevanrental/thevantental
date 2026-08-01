@@ -1,0 +1,379 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "vans": "Furgonetas",
+    "suvs": "SUVs",
+    "hybrid": "Híbrido",
+    "trucks": "Camioneta",
+    "delivery": "Entrega",
+    "reviews": "Reseñas",
+    "about": "Nosotros",
+    "bookOnTuro": "Reservar en Turo"
+  },
+  "common": {
+    "viewFleet": "Ver flota",
+    "contactUs": "Contáctenos",
+    "learnMore": "Ver más",
+    "bookOnTuro": "Reservar en Turo",
+    "exploreVans": "Ver furgonetas",
+    "exploreSUVs": "Ver SUVs",
+    "exploreHighlander": "Ver Highlander",
+    "getInTouch": "Contactar",
+    "viewOurFleet": "Ver nuestra flota",
+    "viewDelivery": "Ver entrega"
+  },
+  "home": {
+    "hero": {
+      "location": "Los Ángeles · Sur de California",
+      "h1a": "Vehículos premium.",
+      "h1b": "Cuando más importa.",
+      "desc": "Furgonetas Mercedes para equipos de producción. SUV GLC para viajes ejecutivos. Silverado 1500 para remolcar y cargar.",
+      "silveradoBtn": "Silverado 1500"
+    },
+    "sprinter": {
+      "badge": "Nuevo · Negro",
+      "eyebrow": "Mercedes-Benz · Sprinter",
+      "h2a": "9 pasajeros.",
+      "h2b": "Una Sprinter negra.",
+      "desc": "La flota acaba de crecer. Nuestra nueva Mercedes-Benz Sprinter negra tiene nueve plazas cómodas — y aún queda espacio de carga para lo que la aventura exija.",
+      "tag1": "9 asientos",
+      "tag2": "Motor diésel",
+      "tag3": "Caben e-bikes y kayaks",
+      "tag4": "Viajes en grupo",
+      "tag5": "Traslados al aeropuerto",
+      "usecaseTitle": "Para personas y equipamiento.",
+      "usecaseDesc": "Nueve asientos y gran capacidad de carga — tabla de surf, e-bikes, kayaks, equipos de cámara. Cárguelo todo y parta.",
+      "photosNote": "Fotos próximamente",
+      "bookBtn": "Reservar en Turo",
+      "callBtn": "Llamar para reservar"
+    },
+    "vans": {
+      "eyebrow": "Mercedes-Benz · Flota Premium",
+      "h2a": "Diseñado para producción.",
+      "h2b": "Respaldado por la",
+      "h2c": "estrella de tres puntas.",
+      "desc": "Nuestras furgonetas Mercedes no son un alquiler cualquiera. Elegidas por equipos de cine, productores de eventos y equipos logísticos que no pueden permitirse paradas.",
+      "exploreBtn": "Ver furgonetas",
+      "cargo": {
+        "tag": "Carga y Logística",
+        "type": "Cargo Van",
+        "desc": "Capacidad máxima para transporte de equipo, rodajes y logística pesada. Gran área de carga con piso reforzado.",
+        "specs": ["Gran área de carga", "Opción de techo alto", "Listo para rampa"]
+      },
+      "crew": {
+        "tag": "Eventos y Producción",
+        "type": "Crew Van",
+        "desc": "Cinco asientos más espacio de carga en la parte trasera. La opción ideal para equipos de cine y eventos donde personas y equipo viajan juntos.",
+        "badge": "Más reservado",
+        "specs": ["5 asientos", "Sección de carga trasera", "Ideal para cine y eventos"]
+      }
+    },
+    "silverado": {
+      "badge": "Disponible ahora",
+      "eyebrow": "Chevrolet · Camioneta Full-Size",
+      "h2a": "Silverado 1500 LTZ.",
+      "h2b": "Diésel. Totalmente equipado.",
+      "desc": "La única camioneta diésel full-size en renta en el Sur de California. Motor Duramax 3.0L, paquete de remolque, cámaras 360°, sensores de estacionamiento.",
+      "specs": ["Diésel Duramax 3.0L", "Paquete de remolque", "Cámaras 360°", "Sensores de parqueo", "Trim LTZ", "2022"],
+      "seeBtn": "Ver la camioneta",
+      "bookBtn": "Reservar en Turo"
+    },
+    "fleet": {
+      "h2": "Flota completa",
+      "desc": "Todos los vehículos de la flota — elige el que mejor se adapte al trabajo.",
+      "whereDeliver": "Zonas de entrega",
+      "silverado": {
+        "badge": "Disponible ahora",
+        "eyebrow": "Camioneta Full-Size",
+        "h3": "Chevy Silverado",
+        "desc": "2022 LTZ, diésel Duramax 3.0L. Paquete de remolque, cámaras 360°, sensores. La única camioneta diésel en SoCal.",
+        "link": "Ver Silverado"
+      },
+      "glc": {
+        "eyebrow": "SUV Premium",
+        "h3": "Mercedes GLC",
+        "desc": "Comodidad ejecutiva para viajes de negocios, traslados al aeropuerto y transporte de clientes.",
+        "link": "Ver más"
+      },
+      "highlander": {
+        "eyebrow": "Híbrido 7 Plazas",
+        "h3": "Toyota Highlander",
+        "desc": "Siete plazas, eficiencia híbrida y la fiabilidad de Toyota. Perfecto para grupos grandes y viajes largos.",
+        "link": "Ver más"
+      }
+    },
+    "airports": {
+      "h2a": "Entrega en",
+      "h2b": "aeropuertos.",
+      "desc": "Entregamos directamente en los principales aeropuertos del Sur de California. Baja del avión y ponte en marcha.",
+      "process": {
+        "eyebrow": "El proceso",
+        "h3": "Llega y conduce.",
+        "desc": "Coordinamos la entrega para que tu vehículo esté listo cuando aterrizas. Sin mostradores, sin traslados, sin esperas."
+      }
+    },
+    "cities": {
+      "h2": "Entregamos en:",
+      "desc": "Servicio en Los Ángeles, el Condado de Orange y el Inland Empire."
+    }
+  },
+  "sprinter": {
+    "extraDesc": "Ya sea un traslado grupal al aeropuerto, un equipo de rodaje con equipo de cámara o una aventura al aire libre cargada de e-bikes y kayaks — la Sprinter lo maneja todo sin compromiso. La potencia diésel significa autonomía real por el sur de California.",
+    "spec": {
+      "config": "Configuración",
+      "configVal": "9 asientos de pasajeros",
+      "engine": "Motor",
+      "engineVal": "Diésel",
+      "cargo": "Carga",
+      "cargoVal": "E-bikes, kayaks, tablas",
+      "color": "Color",
+      "colorVal": "Negro",
+      "delivery": "Entrega",
+      "deliveryVal": "LAX, SNA, ONT y más"
+    },
+    "cta": {
+      "h2": "Lista cuando usted lo esté.",
+      "desc": "Llámenos directamente para reservar la Sprinter. Coordinamos la entrega en aeropuertos, hoteles y ubicaciones en el sur de California."
+    }
+  },
+  "vans": {
+    "eyebrow": "Mercedes-Benz",
+    "h1": "Nuestras Furgonetas",
+    "subtitle": "Dos configuraciones, un estándar: calidad Mercedes para trabajo profesional.",
+    "cargo": {
+      "tag": "Carga y Logística",
+      "name": "Cargo Van",
+      "desc": "Capacidad máxima para transporte de equipo, rodajes y logística pesada. Piso reforzado, opción de techo alto y compatibilidad con rampa de carga.",
+      "specs": ["Gran área de carga", "Opción de techo alto", "Listo para rampa", "Piso reforzado"]
+    },
+    "crew": {
+      "tag": "Eventos y Producción de Cine",
+      "name": "Crew Van",
+      "desc": "Cinco asientos orientados hacia adelante más una sección de carga trasera dedicada. Ideal para equipos de cine, eventos y cualquier operación donde personas y equipo viajan juntos.",
+      "specs": ["5 asientos de pasajeros", "Sección de carga trasera", "Clima automático", "Ideal para eventos"],
+      "bookGray": "Reservar Crew Van Gris en Turo"
+    },
+    "sprinter": {
+      "tag": "9 Pasajeros · Viajes en Grupo",
+      "name": "Sprinter 9 Pasajeros",
+      "desc": "Nueve asientos y gran capacidad de carga en un solo Sprinter negro de Mercedes-Benz. La opción perfecta para grupos, traslados al aeropuerto, excursiones de surf y aventuras por el sur de California.",
+      "specs": ["9 asientos", "Motor diésel", "Gran maletero", "E-bikes y kayaks"],
+      "book": "Reservar Sprinter Negro en Turo"
+    },
+    "bookCargo": "Reservar Cargo Van en Turo"
+  },
+  "extras": {
+    "eyebrow": "Disponible como Extras en Turo",
+    "h2": "Prepárate para la aventura.",
+    "desc": "Al reservar cualquiera de nuestras furgonetas, puedes añadir estos extras directamente en Turo — desde internet satelital hasta equipo de surf.",
+    "sup": { "tag": "Agua", "name": "Paddle Board", "desc": "Tabla SUP de tamaño completo para lagos, bahías y mar abierto." },
+    "starlink": { "tag": "Conectividad", "name": "Starlink", "desc": "Internet satelital en cualquier lugar. Funciona donde no hay cobertura móvil." },
+    "cooler": { "tag": "Provisiones", "name": "Hielera", "desc": "Hielera grande con hielo — mantiene comida y bebidas frías todo el día. Sin electricidad." },
+    "ebike": { "tag": "Eléctrico", "name": "E-Bike", "desc": "Bicicleta eléctrica — explora senderos y ciudades sin esfuerzo." }
+  },
+  "suvs": {
+    "eyebrow": "SUV Premium",
+    "h1": "Mercedes GLC",
+    "subtitle": "Comodidad ejecutiva para viajes de negocios, transporte de clientes y traslados al aeropuerto.",
+    "premium": {
+      "h2": "La elección premium.",
+      "p1": "El Mercedes GLC representa la cúspide de lo que debe ser un vehículo de alquiler. Ya sea que recojas a un cliente del LAX, te dirijas a una reunión de negocios en Century City, o te tomes un capricho en un viaje — el GLC ofrece refinamiento sin concesiones.",
+      "p2": "Disponible en múltiples colores. Todos los vehículos están impecablemente mantenidos y presentados en condición de showroom. Toca cualquier foto para reservar ese vehículo en Turo."
+    },
+    "specs": ["Interior de cuero", "Navegación avanzada", "Sistemas de asistencia", "Techo panorámico", "Audio premium", "Carga inalámbrica"],
+    "glb": {
+      "eyebrow": "SUV Compacto",
+      "h2": "Mercedes GLB",
+      "desc": "El GLB ofrece el mismo refinamiento de Mercedes en un paquete más compacto y ágil. Perfecto para conducción urbana, traslados al aeropuerto y viajes ejecutivos cuando se prefiere menor tamaño. Toca la foto para reservar en Turo."
+    },
+    "bmw": {
+      "eyebrow": "Sedán de Lujo",
+      "h2": "BMW Serie 5",
+      "desc": "El BMW Serie 5 aporta refinamiento ejecutivo a cada trayecto. Suave, preciso e inconfundiblemente premium — ideal para viajes de negocios, recogidas de clientes y traslados al aeropuerto en el sur de California.",
+      "book": "Reservar BMW Serie 5 en Turo"
+    }
+  },
+  "hybrid": {
+    "eyebrow": "Híbrido 7 Plazas",
+    "h1": "Toyota Highlander",
+    "subtitle": "Siete pasajeros, eficiencia híbrida y la legendaria fiabilidad de Toyota.",
+    "room": {
+      "h2": "Espacio para todos.",
+      "p1": "El Highlander Hybrid acomoda a siete personas cómodamente en tres filas. Cuando todo tu equipo necesita viajar junto — o sales con la familia — este es el vehículo que lo hace fácil.",
+      "p2": "El motor híbrido significa menores costos de combustible en viajes largos por el Sur de California. Desde LA hasta San Diego, de Malibu a Palm Springs. Toca la foto para reservar en Turo."
+    },
+    "specs": ["7 plazas", "3 filas", "Motor híbrido", "Tracción AWD", "Apple CarPlay", "Amplio maletero"]
+  },
+  "trucks": {
+    "eyebrow": "Chevrolet · Camioneta Full-Size",
+    "h1a": "Silverado 1500.",
+    "h1b": "Hecha para trabajar.",
+    "subtitle": "La Silverado 1500 LTZ 2022 con el motor Duramax 3.0L. Capacidad de remolque, paquete tecnológico completo y la fiabilidad de una camioneta americana.",
+    "story": {
+      "eyebrow": "2022 · LTZ · Duramax Diésel",
+      "h2": "Una camioneta que trabaja tan duro como tú.",
+      "p1": "La Silverado 1500 LTZ no es una sobrante de lote de alquiler. Es una camioneta completamente equipada — motor diésel para torque real y autonomía, paquete de remolque para trailers y equipo, y el conjunto tecnológico completo que esperarías de un vehículo premium.",
+      "p2": "Ya sea que remolques un tráiler, muevas equipo, o necesites una camioneta capaz para un trabajo en el Sur de California — esta es la indicada."
+    },
+    "specs": [
+      { "label": "Motor", "value": "Duramax 3.0L Diésel" },
+      { "label": "Trim", "value": "LTZ — Opciones completas" },
+      { "label": "Año", "value": "2022" },
+      { "label": "Configuración", "value": "Cabina doble" },
+      { "label": "Remolque", "value": "Paquete incluido" },
+      { "label": "Cámaras", "value": "360° + Cámara trasera" },
+      { "label": "Estacionamiento", "value": "Sensores delanteros y traseros" },
+      { "label": "Infotainment", "value": "Pantalla táctil grande" }
+    ],
+    "alsoInFleet": "También en la flota",
+    "vansCard": {
+      "eyebrow": "Mercedes",
+      "h3": "Cargo & Crew Vans",
+      "desc": "Furgonetas para carga, logística y producción.",
+      "link": "Ver furgonetas"
+    },
+    "suvsCard": {
+      "eyebrow": "Mercedes",
+      "h3": "SUVs GLC & GLB",
+      "desc": "SUVs ejecutivos para viajes de negocios y traslados al aeropuerto.",
+      "link": "Ver SUVs"
+    },
+    "hybridCard": {
+      "eyebrow": "Toyota",
+      "h3": "Highlander Híbrido",
+      "desc": "Híbrido de 7 plazas para grupos grandes y viajes en familia.",
+      "link": "Ver Highlander"
+    }
+  },
+  "delivery": {
+    "eyebrow": "Zonas de entrega",
+    "h1": "Entrega.",
+    "subtitle": "Llevamos el vehículo hasta ti. Comenzando por los principales aeropuertos del Sur de California, luego por el Condado de LA, Orange y el Inland Empire.",
+    "airports": {
+      "h2": "Aeropuertos",
+      "viewDelivery": "Ver entrega"
+    },
+    "cities": {
+      "h2": "Ciudades"
+    }
+  },
+  "reviews": {
+    "h1": "Reseñas",
+    "subtitle": "5.0 en Google. Esto es lo que dicen nuestros clientes.",
+    "items": [
+      { "name": "Michael T.", "role": "Productor de cine", "text": "Alquilé la Crew Van para un rodaje de 3 días en el centro de LA. La furgoneta estaba impecable y el equipo fue increíblemente receptivo. Sin duda la usaré de nuevo en nuestra próxima producción." },
+      { "name": "Sarah K.", "role": "Coordinadora de eventos", "text": "Necesitábamos tanto una Cargo Van como el GLC para un evento corporativo de alto nivel. Todo fue entregado a tiempo y en perfectas condiciones. El GLC estaba impecable." },
+      { "name": "James R.", "role": "Viajero de negocios", "text": "El Mercedes GLC esperándome en el LAX hizo que todo el viaje comenzara con el pie derecho. Limpio, cómodo y el proceso fue completamente perfecto." },
+      { "name": "Elena M.", "role": "Bloguera de viajes", "text": "Llevé el Highlander en un viaje de una semana por la costa con toda la familia. Siete asientos, eficiencia híbrida — no podría haber pedido un mejor vehículo." },
+      { "name": "David C.", "role": "Gerente de logística", "text": "Usamos las Cargo Vans regularmente para transporte de equipo. Fiables, bien mantenidas y el equipo siempre es profesional. Muy recomendable para cualquier necesidad logística." },
+      { "name": "Alicia N.", "role": "Organizadora de bodas", "text": "Usé tanto la Crew Van como el GLC para el transporte de un evento de boda. Los vehículos fueron perfectos y el servicio fue de primera. Nuestros clientes quedaron impresionados." }
+    ]
+  },
+  "about": {
+    "h1a": "Sabemos lo que",
+    "h1b": "los profesionales necesitan.",
+    "p1": "The Van Rental nació en torno a una idea: los vehículos que utilizan los equipos de cine, los organizadores de eventos y los viajeros de negocios merecen ser tan profesionales como el trabajo mismo.",
+    "p2": "Operamos una flota seleccionada de furgonetas Mercedes — en configuraciones Cargo y Crew — junto con SUVs GLC de lujo y el Toyota Highlander híbrido de 7 plazas. Cada vehículo está impecablemente mantenido y presentado en condición de showroom.",
+    "p3": "Basados en el Sur de California. Con entrega en LAX, Aeropuerto John Wayne y Ontario International.",
+    "stats": [
+      { "num": "4+", "label": "Tipos de vehículos", "desc": "Cargo Van, Crew Van, GLC SUV, Highlander Híbrido" },
+      { "num": "3", "label": "Aeropuertos servidos", "desc": "LAX, John Wayne (SNA), Ontario (ONT)" },
+      { "num": "5.0", "label": "Calificación en Google", "desc": "Constantemente mejor valorados por clientes de todos los sectores" }
+    ],
+    "getInTouch": "Contactar",
+    "viewFleet": "Ver nuestra flota"
+  },
+  "contact": {
+    "h1": "Contáctenos.",
+    "subtitle": "¿Listo para reservar o tienes preguntas? Escríbenos directamente — respondemos rápido.",
+    "phoneLbl": "Teléfono",
+    "emailLbl": "Correo electrónico",
+    "serviceAreaLbl": "Área de servicio",
+    "serviceAreaVal": "Sur de California",
+    "airportDelivery": "Entrega en aeropuerto disponible",
+    "form": {
+      "h2": "Enviar un mensaje",
+      "nameLbl": "Nombre",
+      "namePh": "Tu nombre",
+      "contactLbl": "Teléfono o correo",
+      "contactPh": "La mejor forma de contactarte",
+      "vehicleLbl": "Vehículo de interés",
+      "vehicleDefault": "Selecciona un vehículo",
+      "messageLbl": "Mensaje",
+      "messagePh": "Fechas, lugar de recogida, detalles...",
+      "submit": "Enviar mensaje"
+    }
+  },
+  "footer": {
+    "tagline": "Alquiler de vehículos premium para equipos de producción, eventos, viajes ejecutivos y más. Servicio en el Sur de California.",
+    "fleetLbl": "Flota",
+    "companyLbl": "Empresa",
+    "serviceAreasLbl": "Zonas de servicio",
+    "vanRentalCity": "Alquiler de Van en {{city}}",
+    "copyright": "© {{year}} The Van Rental. Todos los derechos reservados. Gavriloff LLC",
+    "rating": "5.0 en Google Reviews",
+    "cargoVan": "Mercedes Cargo Van",
+    "crewVan": "Mercedes Crew Van",
+    "glcSuv": "GLC SUV",
+    "highlander": "Highlander Híbrido",
+    "silverado": "Chevy Silverado",
+    "aboutUs": "Nosotros",
+    "reviews": "Reseñas",
+    "contact": "Contacto"
+  },
+  "cityPage": {
+    "h1a": "Alquiler de van en",
+    "subtitleTpl": "Furgonetas Mercedes premium, SUVs GLC e Highlanders híbridos para {{useCase}} — servicio en {{name}} y los alrededores de {{landmark}}.",
+    "viewFleet": "Ver flota",
+    "localEyebrowTpl": "Local en {{name}}",
+    "localH2Tpl": "Diseñado para las necesidades de {{name}}.",
+    "nearestAirportTpl": "El aeropuerto más cercano para coordinar la entrega es {{airport}}. Sea cual sea el trabajo — producción, viaje de negocios o viaje familiar — nuestro equipo entrega un vehículo limpio y listo donde {{name}} lo necesite.",
+    "availableH2Tpl": "Disponible cerca de {{name}}",
+    "vansCard": {
+      "eyebrow": "Mercedes",
+      "h3": "Cargo & Crew Vans",
+      "desc": "Furgonetas para carga, logística y producción.",
+      "link": "Ver furgonetas"
+    },
+    "suvsCard": {
+      "eyebrow": "Mercedes",
+      "h3": "SUVs GLC & GLB",
+      "desc": "SUVs ejecutivos para viajes de negocios y traslados al aeropuerto.",
+      "link": "Ver SUVs"
+    },
+    "hybridCard": {
+      "eyebrow": "Toyota",
+      "h3": "Highlander Híbrido",
+      "desc": "Híbrido de 7 plazas para grupos grandes y viajes en familia.",
+      "link": "Ver Highlander"
+    }
+  },
+  "airportPage": {
+    "h1a": "Entrega de alquiler",
+    "h1bTpl": "en aeropuerto {{code}}.",
+    "subtitleTpl": "Llevamos el vehículo hasta ti en {{name}}. Sin mostradores, sin esperas — tu vehículo está listo.",
+    "deliveryEyebrowTpl": "Entrega en {{code}}",
+    "builtForTpl": "Diseñado para {{name}}.",
+    "coordinateNote": "Coordina un horario de recogida y terminal antes de tu vuelo, y nuestro equipo tendrá tu furgoneta Mercedes, SUV GLC o GLB, o Highlander Híbrido listo — limpio, con combustible y esperándote.",
+    "viewFleet": "Ver flota",
+    "availableH2Tpl": "Disponible para entrega en {{code}}",
+    "vansCard": {
+      "eyebrow": "Mercedes",
+      "h3": "Cargo & Crew Vans",
+      "desc": "Furgonetas para carga, logística y producción.",
+      "link": "Ver furgonetas"
+    },
+    "suvsCard": {
+      "eyebrow": "Mercedes",
+      "h3": "SUVs GLC & GLB",
+      "desc": "SUVs ejecutivos para viajes de negocios y traslados al aeropuerto.",
+      "link": "Ver SUVs"
+    },
+    "hybridCard": {
+      "eyebrow": "Toyota",
+      "h3": "Highlander Híbrido",
+      "desc": "Híbrido de 7 plazas para grupos grandes y viajes en familia.",
+      "link": "Ver Highlander"
+    }
+  }
+}
