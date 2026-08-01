@@ -43,7 +43,7 @@ function walk(dir) {
 }
 
 async function main() {
-  const { ReplitConnectors } = await import('/home/runner/workspace/node_modules/@replit/connectors-sdk/index.js');
+  const { ReplitConnectors } = await import('@replit/connectors-sdk');
   const connectors = new ReplitConnectors();
 
   async function gh(endpoint, method = 'GET', body = undefined) {

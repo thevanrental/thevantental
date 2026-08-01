@@ -8,8 +8,6 @@ import uk from './locales/uk.json'
 
 export type Locale = 'en' | 'es' | 'fr' | 'ru' | 'uk'
 
-const savedLang = (typeof localStorage !== 'undefined' ? localStorage.getItem('lang') : null) as Locale | null
-
 i18n
   .use(initReactI18next)
   .init({
@@ -20,7 +18,7 @@ i18n
       ru: { translation: ru },
       uk: { translation: uk },
     },
-    lng: savedLang || 'en',
+    lng: 'en',
     fallbackLng: 'en',
     interpolation: { escapeValue: false },
   })
