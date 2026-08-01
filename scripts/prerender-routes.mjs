@@ -5,6 +5,8 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, '..');
 const distDir = path.join(root, 'client-dist');
+const serverEntry = path.join(root, 'server-dist', 'entry-server.js');
+const { render } = await import(serverEntry);
 const citiesSrc = fs.readFileSync(path.join(root, 'client/src/data/cities.ts'), 'utf-8');
 const airportsSrc = fs.readFileSync(path.join(root, 'client/src/data/airports.ts'), 'utf-8');
 
@@ -43,6 +45,12 @@ const OG_IMAGE = `${BASE}/images/crew.jpeg`;
 
 const staticRoutes = [
   {
+    route: '/',
+    title: 'The Van Rental — Premium Vehicle Rentals in Southern California',
+    description: 'Mercedes cargo vans, crew vans, luxury SUVs, hybrids, trucks, and Sprinter passenger vans. Delivery across Southern California and to LAX, SNA, ONT, and LGB.',
+    ogImage: OG_IMAGE,
+  },
+  {
     route: '/trucks',
     title: 'Chevy Silverado 1500 Truck Rental | The Van Rental',
     description: 'Rent a 2022 Chevrolet Silverado 1500 LTZ in Southern California. 3.0L Duramax diesel, towing package, backup cameras, parking sensors. Book on Turo.',
@@ -65,6 +73,12 @@ const staticRoutes = [
     title: 'Toyota Highlander Hybrid Rental — 7 Seats | The Van Rental',
     description: 'Rent a 7-seat Toyota Highlander Hybrid in Southern California. Perfect for large groups, family road trips, and extended travel. Delivery to LAX, SNA, ONT.',
     ogImage: `${BASE}/images/highlander.jpeg`,
+  },
+  {
+    route: '/sprinter',
+    title: 'Mercedes-Benz Sprinter Passenger Van Rental | The Van Rental',
+    description: 'Rent a black Mercedes-Benz Sprinter passenger van with seating for 9 in Southern California. Ideal for productions, events, airport transfers, and group travel.',
+    ogImage: `${BASE}/images/sprinter-exterior.png`,
   },
   {
     route: '/delivery',
@@ -98,6 +112,15 @@ const cityRoutes = cities.map((c) => ({
   description: `Rent a Mercedes Cargo Van, Crew Van, GLC SUV, or Highlander Hybrid in ${c.name}. Serving ${c.useCase} near ${c.landmark}. Delivery available near ${c.nearestAirport}.`,
   ogImage: c.heroImage ? `${BASE}${c.heroImage}` : OG_IMAGE,
   canonical: `${BASE}/van-rental-${c.slug}`,
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `Van Rental in ${c.name}, CA`,
+    provider: { '@type': 'LocalBusiness', name: 'The Van Rental', url: BASE, telephone: '+13236107634' },
+    areaServed: { '@type': 'City', name: c.name },
+    serviceType: 'Vehicle rental and delivery',
+    url: `${BASE}/van-rental-${c.slug}`,
+  },
 }));
 
 const airportRoutes = airports.map((a) => ({
@@ -106,6 +129,15 @@ const airportRoutes = airports.map((a) => ({
   description: `We deliver Mercedes Cargo Vans, Crew Vans, GLC & GLB SUVs, and Highlander Hybrids directly to ${a.name} (${a.code}). No counters, no shuttles — book on Turo and drive.`,
   ogImage: a.heroImage ? `${BASE}${a.heroImage}` : OG_IMAGE,
   canonical: `${BASE}/airport-${a.slug}`,
+  structuredData: {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: `${a.code} Airport Van Rental Delivery`,
+    provider: { '@type': 'LocalBusiness', name: 'The Van Rental', url: BASE, telephone: '+13236107634' },
+    areaServed: { '@type': 'Airport', name: a.name, iataCode: a.code },
+    serviceType: 'Airport vehicle rental delivery',
+    url: `${BASE}/airport-${a.slug}`,
+  },
 }));
 
 const allRoutes = [...staticRoutes, ...cityRoutes, ...airportRoutes];
@@ -114,7 +146,7 @@ function escape(str) {
   return str.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 }
 
-function injectMeta(html, { title, description, canonical, ogImage, route }) {
+function injectMeta(html, { title, description, canonical, ogImage, route, structuredData }) {
   const canonicalHref = canonical || `${BASE}${route}`;
   const safeTitle = escape(title);
   const safeDesc = escape(description);
@@ -144,6 +176,11 @@ function injectMeta(html, { title, description, canonical, ogImage, route }) {
 
   html = html.replace('</head>', `    ${metaBlock}\n  </head>`);
 
+  if (structuredData) {
+    const json = JSON.stringify(structuredData).replace(/</g, '\\u003c');
+    html = html.replace('</head>', `    <script id="page-structured-data" type="application/ld+json">${json}</script>\n  </head>`);
+  }
+
   return html;
 }
 
@@ -151,11 +188,19 @@ const baseHtml = fs.readFileSync(path.join(distDir, 'index.html'), 'utf-8');
 
 let count = 0;
 for (const routeData of allRoutes) {
-  const dir = path.join(distDir, routeData.route.replace(/^\//, ''));
+  const routePath = routeData.route.replace(/^\//, '');
+  const dir = routePath ? path.join(distDir, routePath) : distDir;
   fs.mkdirSync(dir, { recursive: true });
-  const html = injectMeta(baseHtml, routeData);
+  let html = injectMeta(baseHtml, routeData);
+  html = html.replace('<div id="root"></div>', `<div id="root">${render(routeData.route)}</div>`);
   fs.writeFileSync(path.join(dir, 'index.html'), html);
   count++;
 }
 
 console.log(`Prerendered ${count} route shells with unique meta tags into client-dist/`);
+
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${allRoutes
+  .map(({ route }) => `  <url><loc>${BASE}${route}</loc><changefreq>${route === '/' ? 'weekly' : 'monthly'}</changefreq></url>`)
+  .join('\n')}\n</urlset>\n`;
+fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
+process.exit(0);

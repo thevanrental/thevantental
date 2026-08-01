@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "verify": "npm --prefix client run build && git diff --exit-code"
+  },
   "dependencies": {
     "@replit/connectors-sdk": "^0.4.1"
   }
