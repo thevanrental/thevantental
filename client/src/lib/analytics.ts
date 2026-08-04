@@ -3,6 +3,7 @@ type AnalyticsPayload = Record<string, string | number | boolean | undefined>
 declare global {
   interface Window {
     dataLayer?: Array<Record<string, unknown>>
+    gtag?: (...args: unknown[]) => void
   }
 }
 
@@ -32,5 +33,12 @@ export function trackEvent(event: string, payload: AnalyticsPayload = {}) {
     ...attribution,
     ...payload,
   })
-}
 
+  if (event === 'turo_booking_click' && window.gtag) {
+    window.gtag('event', 'conversion', {
+      send_to: 'AW-17276473534/0dhmCK-K7dscEL6hiK5A',
+      value: 1,
+      currency: 'USD',
+    })
+  }
+}
