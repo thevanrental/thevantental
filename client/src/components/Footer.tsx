@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Phone, Mail, Star } from 'lucide-react'
+import { ArrowRight, Mail, Star } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { CITIES } from '../data/cities'
 
@@ -16,8 +16,8 @@ export function Footer() {
               {t('footer.tagline')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 text-sm font-medium">
-              <a href="tel:+13236107634" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
-                <Phone className="w-4 h-4" /> (323) 610-7634
+              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
+                <ArrowRight className="w-4 h-4" /> {t('nav.bookOnTuro')}
               </a>
               <a href="mailto:info@thevanrental.com" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
                 <Mail className="w-4 h-4" /> info@thevanrental.com
