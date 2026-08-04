@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, MapPin, Phone } from 'lucide-react'
+import { ArrowRight, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -60,8 +60,8 @@ export function CityPage({ city }: { city: City }) {
               <Link to="/vans" className="bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium flex items-center">
                 {t('cityPage.viewFleet')}
               </Link>
-              <a href="tel:+13236107634" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
-                <Phone className="w-4 h-4" /> (323) 610-7634
+              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
+                {t('nav.bookOnTuro')} <ArrowRight className="w-4 h-4" />
               </a>
             </div>
           </div>
