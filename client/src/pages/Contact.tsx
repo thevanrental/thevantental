@@ -1,4 +1,4 @@
-import { Phone, Mail, MapPin } from 'lucide-react'
+import { ArrowRight, Mail, MapPin } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -9,12 +9,12 @@ export function Contact() {
 
   useSEO({
     title: 'Book a Vehicle | The Van Rental',
-    description: 'Contact The Van Rental to book a Mercedes van, GLC SUV, or Highlander hybrid in Southern California. Call (323) 610-7634 or email info@thevanrental.com.',
+    description: 'Book a Mercedes van, SUV, hybrid, or truck in Southern California through our secure Turo listings. Check live availability, trip pricing, and vehicle details.',
     canonical: 'https://www.thevanrental.com/contact',
   })
 
   const contactItems = [
-    { icon: Phone, label: t('contact.phoneLbl'), value: '(323) 610-7634', href: 'tel:+13236107634' },
+    { icon: ArrowRight, label: 'Reservations', value: t('nav.bookOnTuro'), href: 'https://turo.com/us/en/drivers/14886572' },
     { icon: Mail, label: t('contact.emailLbl'), value: 'info@thevanrental.com', href: 'mailto:info@thevanrental.com' },
     { icon: MapPin, label: t('contact.serviceAreaLbl'), value: t('contact.serviceAreaVal'), href: '#' },
   ]
@@ -55,36 +55,15 @@ export function Contact() {
               </div>
             </div>
 
-            <div className="bg-zinc-50 p-10">
-              <h2 className="text-2xl font-medium mb-8">{t('contact.form.h2')}</h2>
-              <form className="flex flex-col gap-5" onSubmit={e => e.preventDefault()}>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-medium tracking-widest uppercase text-zinc-400">{t('contact.form.nameLbl')}</label>
-                  <input type="text" className="border border-zinc-200 px-4 h-12 text-sm focus:outline-none focus:border-zinc-400 transition-colors bg-white" placeholder={t('contact.form.namePh')} />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-medium tracking-widest uppercase text-zinc-400">{t('contact.form.contactLbl')}</label>
-                  <input type="text" className="border border-zinc-200 px-4 h-12 text-sm focus:outline-none focus:border-zinc-400 transition-colors bg-white" placeholder={t('contact.form.contactPh')} />
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-medium tracking-widest uppercase text-zinc-400">{t('contact.form.vehicleLbl')}</label>
-                  <select className="border border-zinc-200 px-4 h-12 text-sm focus:outline-none focus:border-zinc-400 transition-colors bg-white">
-                    <option value="">{t('contact.form.vehicleDefault')}</option>
-                    <option>Mercedes Cargo Van</option>
-                    <option>Mercedes Crew Van</option>
-                    <option>Mercedes GLC SUV</option>
-                    <option>Toyota Highlander Hybrid</option>
-                    <option>Chevy Silverado 1500</option>
-                  </select>
-                </div>
-                <div className="flex flex-col gap-2">
-                  <label className="text-xs font-medium tracking-widest uppercase text-zinc-400">{t('contact.form.messageLbl')}</label>
-                  <textarea rows={4} className="border border-zinc-200 px-4 py-3 text-sm focus:outline-none focus:border-zinc-400 transition-colors bg-white resize-none" placeholder={t('contact.form.messagePh')} />
-                </div>
-                <button type="submit" className="bg-zinc-900 text-white h-12 text-sm font-medium hover:bg-zinc-800 transition-colors mt-2">
-                  {t('contact.form.submit')}
-                </button>
-              </form>
+            <div className="bg-zinc-950 text-white p-10 flex flex-col justify-between min-h-[360px]">
+              <div>
+                <p className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-4">Secure booking</p>
+                <h2 className="text-3xl font-medium mb-5">Check live availability on Turo</h2>
+                <p className="text-zinc-400 font-light leading-relaxed">Choose a vehicle, see the exact price for your dates, review delivery options, and complete your reservation securely.</p>
+              </div>
+              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="mt-10 bg-white text-zinc-900 h-14 px-8 inline-flex items-center justify-center gap-2 font-medium group">
+                {t('nav.bookOnTuro')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
         </div>

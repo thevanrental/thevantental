@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Phone } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -90,12 +90,6 @@ export function Trucks() {
                   className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-100 transition-colors h-12 px-8 text-sm font-medium group"
                 >
                   {t('nav.bookOnTuro')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </a>
-                <a
-                  href="tel:+13236107634"
-                  className="inline-flex items-center gap-2 border border-zinc-700 hover:border-zinc-500 transition-colors h-12 px-8 text-sm font-medium"
-                >
-                  <Phone className="w-4 h-4" /> (323) 610-7634
                 </a>
               </div>
             </div>

@@ -38,9 +38,6 @@ export function Nav() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-4">
-          <a href="tel:+13236107634" className="text-sm font-medium hover:text-zinc-500 transition-colors">
-            (323) 610-7634
-          </a>
           <div className="flex flex-col items-center gap-1">
             <a
               href="https://turo.com/us/en/drivers/14886572"
