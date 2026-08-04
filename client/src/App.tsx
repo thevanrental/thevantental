@@ -14,11 +14,13 @@ import { Delivery } from './pages/Delivery'
 import { Trucks } from './pages/Trucks'
 import { Sprinter } from './pages/Sprinter'
 import { ScrollToTop } from './components/ScrollToTop'
+import { ConversionTracking } from './components/ConversionTracking'
 
 export function App() {
   return (
     <>
       <ScrollToTop />
+      <ConversionTracking />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/vans" element={<Vans />} />
