@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ArrowRight, Users, Fuel, Package, Phone } from 'lucide-react'
+import { ArrowRight, Users, Fuel, Package } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -9,8 +9,8 @@ export function Sprinter() {
   const { t } = useTranslation()
 
   useSEO({
-    title: 'Mercedes-Benz Sprinter — 9 Passenger Van | The Van Rental',
-    description: 'Rent our black Mercedes-Benz Sprinter 9-passenger diesel van in Southern California. Cargo space fits e-bikes, kayaks, and adventure gear. Perfect for groups, tours, and airport transfers.',
+    title: 'Mercedes Sprinter Van Rental Southern California | 9 Passenger',
+    description: 'Rent a Mercedes-Benz Sprinter 9-passenger van in Southern California. Airport delivery, room for luggage and gear, and direct booking on Turo.',
     canonical: 'https://www.thevanrental.com/sprinter',
   })
 
@@ -37,6 +37,16 @@ export function Sprinter() {
           <p className="text-xl text-zinc-500 font-light max-w-2xl leading-relaxed">
             {t('home.sprinter.desc')}
           </p>
+          <div className="flex flex-wrap gap-4 mt-8">
+            <a
+              href="https://turo.com/us/en/van-rental/united-states/brea-ca/mercedes-benz/sprinter-crew/3043514"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium group"
+            >
+              Check availability <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </div>
 
         {/* Photo gallery */}
@@ -56,6 +66,26 @@ export function Sprinter() {
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 border-t border-zinc-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <p className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-4">Rental details</p>
+          <h2 className="text-3xl lg:text-4xl font-medium tracking-tight mb-12">Mercedes Sprinter rental questions</h2>
+          <div className="divide-y divide-zinc-200 border-y border-zinc-200">
+            {[
+              ['How many passengers does this Sprinter seat?', 'This Mercedes-Benz Sprinter is configured for up to 9 passengers, with room for luggage and production or adventure gear.'],
+              ['Where is delivery available?', 'Delivery is available throughout Southern California, including Los Angeles, Orange County, LAX, SNA, LGB, and ONT. Availability and delivery fees vary by trip.'],
+              ['Can I use it for airport transportation?', 'Yes. The passenger and cargo layout works well for airport groups carrying multiple suitcases. Arrange the delivery location when booking.'],
+              ['How do I reserve the van?', 'Use the Check availability button to view live dates, trip pricing, protection options, and complete a secure reservation through Turo.'],
+            ].map(([question, answer]) => (
+              <div key={question} className="py-7">
+                <h3 className="font-medium text-lg mb-2">{question}</h3>
+                <p className="text-zinc-500 font-light leading-relaxed">{answer}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
