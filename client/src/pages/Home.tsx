@@ -83,52 +83,52 @@ export function Home() {
       </section>
 
       {/* Vehicle management — owner acquisition */}
-      <section className="relative overflow-hidden bg-amber-300 text-zinc-950 border-y border-amber-400">
-        <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full border-[64px] border-amber-200/60" />
+      <section className="relative overflow-hidden bg-zinc-950 text-white border-y border-zinc-800">
+        <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full border-[64px] border-zinc-800/70" />
         <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
             <div>
-              <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase border border-zinc-950/30 px-3 py-2 mb-7">
+              <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase text-zinc-300 border border-zinc-700 px-3 py-2 mb-7">
                 <CarFront className="w-4 h-4" /> For Southern California car owners
               </div>
               <h2 className="text-5xl lg:text-7xl font-semibold tracking-tighter leading-[0.95] mb-7">
                 Your car.<br />
-                <span className="text-zinc-950/50">Our full-service Turo management.</span>
+                <span className="text-zinc-500">Our full-service Turo management.</span>
               </h2>
-              <p className="text-xl lg:text-2xl font-light leading-relaxed max-w-2xl mb-10">
+              <p className="text-xl lg:text-2xl text-zinc-300 font-light leading-relaxed max-w-2xl mb-10">
                 Put an underused vehicle to work without handling the daily grind. We manage the listing, pricing, guests, handoffs, cleaning, and trip operations — while you keep visibility into performance and earnings.
               </p>
               <div className="flex flex-wrap gap-4">
                 <a
                   href="mailto:info@thevanrental.com?subject=Vehicle%20management%20for%20Turo"
-                  className="inline-flex items-center gap-2 bg-zinc-950 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium group"
+                  className="inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-zinc-200 transition-colors h-14 px-8 text-base font-medium group"
                 >
                   Tell us about your car <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </a>
                 <a
                   href="mailto:info@thevanrental.com?subject=Vehicle%20management%20questions"
-                  className="inline-flex items-center h-14 px-8 border border-zinc-950/30 hover:border-zinc-950 transition-colors text-base font-medium"
+                  className="inline-flex items-center h-14 px-8 border border-zinc-700 hover:border-zinc-400 transition-colors text-base font-medium"
                 >
                   Ask how revenue sharing works
                 </a>
               </div>
             </div>
 
-            <div className="bg-zinc-950 text-white p-8 lg:p-10 shadow-2xl">
-              <div className="text-xs font-medium tracking-widest uppercase text-amber-300 mb-8">Hands-off hosting</div>
+            <div className="bg-white text-zinc-950 p-8 lg:p-10 shadow-2xl">
+              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-8">Hands-off hosting</div>
               <div className="space-y-7">
                 {[
                   { icon: KeyRound, title: 'We run the operation', desc: 'Listing setup, guest communication, check-in and return coordination, cleaning, and day-to-day trip support.' },
                   { icon: BarChart3, title: 'Transparent performance', desc: 'Track bookings and earnings with clear reporting. Revenue-share terms are agreed before your vehicle goes live.' },
                   { icon: CarFront, title: 'Built around your vehicle', desc: 'We review eligibility, condition, location, availability, and earning potential before accepting a car.' },
                 ].map(({ icon: Icon, title, desc }) => (
-                  <div key={title} className="flex gap-5 pb-7 border-b border-zinc-800 last:border-0 last:pb-0">
-                    <div className="w-11 h-11 flex-shrink-0 bg-amber-300 text-zinc-950 flex items-center justify-center">
+                  <div key={title} className="flex gap-5 pb-7 border-b border-zinc-200 last:border-0 last:pb-0">
+                    <div className="w-11 h-11 flex-shrink-0 bg-zinc-950 text-white flex items-center justify-center">
                       <Icon className="w-5 h-5" />
                     </div>
                     <div>
                       <h3 className="text-lg font-medium mb-2">{title}</h3>
-                      <p className="text-zinc-400 font-light text-sm leading-relaxed">{desc}</p>
+                      <p className="text-zinc-500 font-light text-sm leading-relaxed">{desc}</p>
                     </div>
                   </div>
                 ))}
