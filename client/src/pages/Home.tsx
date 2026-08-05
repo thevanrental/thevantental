@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChevronRight, ArrowRight, MapPin, Truck, Users, Fuel, Package } from 'lucide-react'
+import { ChevronRight, ArrowRight, MapPin, Truck, Users, Fuel, Package, CarFront, BarChart3, KeyRound } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -77,6 +77,65 @@ export function Home() {
                 alt="Premium vehicle fleet"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Vehicle management — owner acquisition */}
+      <section className="relative overflow-hidden bg-amber-300 text-zinc-950 border-y border-amber-400">
+        <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full border-[64px] border-amber-200/60" />
+        <div className="max-w-7xl mx-auto px-6 py-24 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-[0.2em] uppercase border border-zinc-950/30 px-3 py-2 mb-7">
+                <CarFront className="w-4 h-4" /> For Southern California car owners
+              </div>
+              <h2 className="text-5xl lg:text-7xl font-semibold tracking-tighter leading-[0.95] mb-7">
+                Your car.<br />
+                <span className="text-zinc-950/50">Our full-service Turo management.</span>
+              </h2>
+              <p className="text-xl lg:text-2xl font-light leading-relaxed max-w-2xl mb-10">
+                Put an underused vehicle to work without handling the daily grind. We manage the listing, pricing, guests, handoffs, cleaning, and trip operations — while you keep visibility into performance and earnings.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="mailto:info@thevanrental.com?subject=Vehicle%20management%20for%20Turo"
+                  className="inline-flex items-center gap-2 bg-zinc-950 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium group"
+                >
+                  Tell us about your car <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a
+                  href="mailto:info@thevanrental.com?subject=Vehicle%20management%20questions"
+                  className="inline-flex items-center h-14 px-8 border border-zinc-950/30 hover:border-zinc-950 transition-colors text-base font-medium"
+                >
+                  Ask how revenue sharing works
+                </a>
+              </div>
+            </div>
+
+            <div className="bg-zinc-950 text-white p-8 lg:p-10 shadow-2xl">
+              <div className="text-xs font-medium tracking-widest uppercase text-amber-300 mb-8">Hands-off hosting</div>
+              <div className="space-y-7">
+                {[
+                  { icon: KeyRound, title: 'We run the operation', desc: 'Listing setup, guest communication, check-in and return coordination, cleaning, and day-to-day trip support.' },
+                  { icon: BarChart3, title: 'Transparent performance', desc: 'Track bookings and earnings with clear reporting. Revenue-share terms are agreed before your vehicle goes live.' },
+                  { icon: CarFront, title: 'Built around your vehicle', desc: 'We review eligibility, condition, location, availability, and earning potential before accepting a car.' },
+                ].map(({ icon: Icon, title, desc }) => (
+                  <div key={title} className="flex gap-5 pb-7 border-b border-zinc-800 last:border-0 last:pb-0">
+                    <div className="w-11 h-11 flex-shrink-0 bg-amber-300 text-zinc-950 flex items-center justify-center">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-medium mb-2">{title}</h3>
+                      <p className="text-zinc-400 font-light text-sm leading-relaxed">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <p className="text-[11px] text-zinc-500 leading-relaxed mt-8">
+                Earnings vary by vehicle, availability, pricing, demand, seasonality, mileage, and expenses. Turo cites approximately $634/month as an average owner share in its passive-income program; this is not a guarantee. Direct co-host payment availability is subject to Turo rollout and account eligibility.
+              </p>
             </div>
           </div>
         </div>
