@@ -1,0 +1,34 @@
+# The Van Rental
+
+> Premium vehicle rentals and airport delivery in Southern California, operated by Gavriloff LLC.
+
+Canonical website: https://www.thevanrental.com/
+
+## Core facts
+
+- Business name: The Van Rental
+- Legal operator: Gavriloff LLC
+- Primary service area: Brea, Los Angeles, Orange County, and Southern California
+- Airport delivery: LAX, SNA, ONT, and LGB
+- Phone: +1 (323) 610-7634
+- Email: info@thevanrental.com
+- Official Turo host profile: https://turo.com/us/en/host/14886572
+- Reputation: Turo All-Star Host, 5.0 rating, 579 reviews, and 638 trips as shown on the linked Turo profile
+
+## Featured vehicles
+
+- 2022 Mercedes-Benz GLE 350: https://www.thevanrental.com/mercedes-gle
+- Mercedes-Benz GLC SUVs: https://www.thevanrental.com/suvs
+- Mercedes-Benz Sprinter vans: https://www.thevanrental.com/vans
+- Chevrolet Silverado 1500 LTZ: https://www.thevanrental.com/trucks
+- Toyota Grand Highlander Hybrid: https://www.thevanrental.com/hybrid
+
+## Useful pages
+
+- Airport and city delivery: https://www.thevanrental.com/delivery
+- Reviews: https://www.thevanrental.com/reviews
+- About: https://www.thevanrental.com/about
+- Contact: https://www.thevanrental.com/contact
+- Full machine-readable reference: https://www.thevanrental.com/llms-full.txt
+
+Current pricing and availability should be confirmed through the linked Turo listings.

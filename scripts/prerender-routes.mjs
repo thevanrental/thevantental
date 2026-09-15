@@ -49,6 +49,30 @@ const staticRoutes = [
     title: 'The Van Rental — Premium Vehicle Rentals in Southern California',
     description: 'Mercedes-Benz GLC and GLE premium SUV rentals in Southern California, with airport delivery and direct Turo booking.',
     ogImage: `${BASE}/images/gle-front.jpg`,
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'WebSite',
+          '@id': `${BASE}/#website`,
+          name: 'The Van Rental',
+          url: `${BASE}/`,
+          inLanguage: 'en-US',
+          publisher: { '@id': `${BASE}/#business` },
+        },
+        {
+          '@type': 'FAQPage',
+          '@id': `${BASE}/#faq`,
+          mainEntity: [
+            ['Where can I rent a Mercedes-Benz GLC or GLE in Southern California?', 'The Van Rental offers Mercedes-Benz GLC and GLE SUV rentals in Brea and serves Los Angeles, Orange County, and surrounding Southern California cities.'],
+            ['Does The Van Rental deliver vehicles to Southern California airports?', 'Yes. Airport delivery is available for LAX, John Wayne Airport (SNA), Ontario International Airport (ONT), and Long Beach Airport (LGB).'],
+            ['How do I book a vehicle?', 'Choose a vehicle on thevanrental.com and continue to the linked Turo listing or the official Turo host profile to confirm current pricing and availability.'],
+            ['What vehicles are available?', 'The fleet includes Mercedes-Benz GLC and GLE SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.'],
+            ['Is The Van Rental highly rated?', 'The Van Rental is operated by a Turo All-Star Host with a 5.0 rating, 579 reviews, and 638 completed trips as reported on the linked Turo host profile.'],
+          ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
+        },
+      ],
+    },
   },
   {
     route: '/trucks',
@@ -206,7 +230,7 @@ for (const routeData of allRoutes) {
 console.log(`Prerendered ${count} route shells with unique meta tags into client-dist/`);
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${allRoutes
-  .map(({ route }) => `  <url><loc>${BASE}${route}</loc><changefreq>${route === '/' ? 'weekly' : 'monthly'}</changefreq></url>`)
+  .map(({ route }) => `  <url><loc>${BASE}${route}</loc><lastmod>${new Date().toISOString().slice(0, 10)}</lastmod><changefreq>${route === '/' ? 'weekly' : 'monthly'}</changefreq></url>`)
   .join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(distDir, 'sitemap.xml'), sitemap);
 process.exit(0);

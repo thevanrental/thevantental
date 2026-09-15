@@ -6,6 +6,29 @@ import { Footer } from '../components/Footer'
 import { useSEO } from '../hooks/useSEO'
 import { CITIES } from '../data/cities'
 
+const HOME_FAQS = [
+  {
+    question: 'Where can I rent a Mercedes-Benz GLC or GLE in Southern California?',
+    answer: 'The Van Rental offers Mercedes-Benz GLC and GLE SUV rentals in Brea and serves Los Angeles, Orange County, and surrounding Southern California cities.',
+  },
+  {
+    question: 'Do you deliver vehicles to Southern California airports?',
+    answer: 'Yes. Airport delivery is available for LAX, John Wayne Airport (SNA), Ontario International Airport (ONT), and Long Beach Airport (LGB).',
+  },
+  {
+    question: 'How do I book a vehicle?',
+    answer: 'Choose a vehicle on this site and continue to the linked Turo listing or our official Turo host profile to confirm current pricing and availability.',
+  },
+  {
+    question: 'What vehicles are available?',
+    answer: 'The fleet includes Mercedes-Benz GLC and GLE SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.',
+  },
+  {
+    question: 'Is The Van Rental highly rated?',
+    answer: 'The Van Rental is operated by a Turo All-Star Host with a 5.0 rating, 579 reviews, and 638 completed trips as reported on our linked Turo host profile.',
+  },
+]
+
 export function Home() {
   const { t } = useTranslation()
 
@@ -13,6 +36,15 @@ export function Home() {
     title: 'The Van Rental — Premium Vehicle Rentals in Southern California',
     description: 'Mercedes-Benz GLC and GLE premium SUV rentals for airport arrivals, executive travel, family weekends, and Southern California drives.',
     canonical: 'https://www.thevanrental.com/',
+    structuredData: {
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: HOME_FAQS.map(({ question, answer }) => ({
+        '@type': 'Question',
+        name: question,
+        acceptedAnswer: { '@type': 'Answer', text: answer },
+      })),
+    },
   })
 
   const silveradoSpecs = t('home.silverado.specs', { returnObjects: true }) as string[]
@@ -396,6 +428,28 @@ export function Home() {
                 <span className="font-medium">{city.name}</span>
                 <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-[#e7a77a] group-hover:translate-x-1 transition-all" />
               </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Search and AI answer-ready FAQ */}
+      <section className="py-24 lg:py-32 bg-[#e9e3dc] text-zinc-950">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-14 lg:gap-24">
+          <div>
+            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-zinc-500 mb-5">Quick answers</div>
+            <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-6">Good to know.</h2>
+            <p className="text-zinc-600 font-light text-lg leading-relaxed">Clear answers about the fleet, airport delivery, service area, and booking.</p>
+          </div>
+          <div className="border-t border-zinc-950/20">
+            {HOME_FAQS.map(({ question, answer }) => (
+              <details key={question} className="group border-b border-zinc-950/20 py-6">
+                <summary className="list-none cursor-pointer flex items-center justify-between gap-6 text-lg font-medium">
+                  <span>{question}</span>
+                  <span className="text-2xl font-light group-open:rotate-45 transition-transform">+</span>
+                </summary>
+                <p className="text-zinc-600 font-light leading-relaxed max-w-2xl pt-4 pr-12">{answer}</p>
+              </details>
             ))}
           </div>
         </div>
