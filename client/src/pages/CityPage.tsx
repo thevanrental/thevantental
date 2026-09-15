@@ -60,7 +60,7 @@ export function CityPage({ city }: { city: City }) {
               <Link to="/vans" className="bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium flex items-center">
                 {t('cityPage.viewFleet')}
               </Link>
-              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
+              <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
                 {t('nav.bookOnTuro')} <ArrowRight className="w-4 h-4" />
               </a>
             </div>

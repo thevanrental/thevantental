@@ -40,7 +40,7 @@ export function Nav() {
         <div className="hidden lg:flex items-center gap-4">
           <div className="flex flex-col items-center gap-1">
             <a
-              href="https://turo.com/us/en/drivers/14886572"
+              href="https://turo.com/us/en/host/14886572"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-zinc-900 text-white text-sm font-medium px-6 h-9 flex items-center hover:bg-zinc-800 transition-colors whitespace-nowrap"
@@ -69,7 +69,7 @@ export function Nav() {
             </Link>
           ))}
           <a
-            href="https://turo.com/us/en/drivers/14886572"
+            href="https://turo.com/us/en/host/14886572"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-zinc-900 text-white text-sm font-medium px-6 h-12 flex items-center justify-center hover:bg-zinc-800 transition-colors"

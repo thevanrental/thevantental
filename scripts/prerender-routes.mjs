@@ -47,8 +47,8 @@ const staticRoutes = [
   {
     route: '/',
     title: 'The Van Rental — Premium Vehicle Rentals in Southern California',
-    description: 'Mercedes cargo vans, crew vans, luxury SUVs, hybrids, trucks, and Sprinter passenger vans. Delivery across Southern California and to LAX, SNA, ONT, and LGB.',
-    ogImage: OG_IMAGE,
+    description: 'Mercedes-Benz GLC and GLE premium SUV rentals in Southern California, with airport delivery and direct Turo booking.',
+    ogImage: `${BASE}/images/gle-front.jpg`,
   },
   {
     route: '/trucks',
@@ -64,9 +64,15 @@ const staticRoutes = [
   },
   {
     route: '/suvs',
-    title: 'Mercedes GLC & GLB SUV Rental | The Van Rental',
-    description: 'Rent a Mercedes GLC or GLB SUV in Southern California. Premium executive vehicles for airport transfers, business travel, and client transport. Delivery to LAX, SNA, ONT.',
+    title: 'Mercedes GLC & GLE SUV Rental | The Van Rental',
+    description: 'Rent a Mercedes GLC or GLE SUV in Southern California. Premium vehicles for airport transfers, business travel, and family trips.',
     ogImage: `${BASE}/images/glcsilver.jpeg`,
+  },
+  {
+    route: '/mercedes-gle',
+    title: '2022 Mercedes-Benz GLE 350 Rental in Brea, CA | The Van Rental',
+    description: 'Rent a 2022 Mercedes-Benz GLE 350 in Southern California. Five seats, Apple CarPlay, heated seats, sunroof, parking assistance, and a 360-degree camera.',
+    ogImage: `${BASE}/images/gle-front.jpg`,
   },
   {
     route: '/hybrid',
@@ -88,8 +94,8 @@ const staticRoutes = [
   },
   {
     route: '/reviews',
-    title: 'Customer Reviews | The Van Rental',
-    description: '5.0 stars on Google. Read what film producers, event coordinators, and business travelers say about renting from The Van Rental in Southern California.',
+    title: 'Turo Guest Reviews | The Van Rental',
+    description: 'Read selected five-star Turo guest feedback for The Van Rental, a 5.0 All-Star Host with 579 reviews and 638 trips.',
     ogImage: OG_IMAGE,
   },
   {

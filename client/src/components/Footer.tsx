@@ -16,7 +16,7 @@ export function Footer() {
               {t('footer.tagline')}
             </p>
             <div className="flex flex-col sm:flex-row gap-6 text-sm font-medium">
-              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
+              <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
                 <ArrowRight className="w-4 h-4" /> {t('nav.bookOnTuro')}
               </a>
               <a href="mailto:info@thevanrental.com" className="flex items-center gap-2 hover:text-zinc-500 transition-colors">
@@ -31,6 +31,7 @@ export function Footer() {
               <Link to="/vans" className="hover:text-zinc-500 transition-colors">{t('footer.cargoVan')}</Link>
               <Link to="/vans" className="hover:text-zinc-500 transition-colors">{t('footer.crewVan')}</Link>
               <Link to="/suvs" className="hover:text-zinc-500 transition-colors">{t('footer.glcSuv')}</Link>
+              <Link to="/mercedes-gle" className="hover:text-zinc-500 transition-colors">Mercedes GLE 350</Link>
               <Link to="/hybrid" className="hover:text-zinc-500 transition-colors">{t('footer.highlander')}</Link>
               <Link to="/trucks" className="hover:text-zinc-500 transition-colors">{t('footer.silverado')}</Link>
             </div>
@@ -65,7 +66,7 @@ export function Footer() {
           <div>{t('footer.copyright', { year: new Date().getFullYear() })}</div>
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
-            <span className="ml-2">{t('footer.rating')}</span>
+            <span className="ml-2">5.0 on Turo · 579 reviews</span>
           </div>
         </div>
       </div>

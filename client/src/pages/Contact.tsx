@@ -14,7 +14,7 @@ export function Contact() {
   })
 
   const contactItems = [
-    { icon: ArrowRight, label: 'Reservations', value: t('nav.bookOnTuro'), href: 'https://turo.com/us/en/drivers/14886572' },
+    { icon: ArrowRight, label: 'Reservations', value: t('nav.bookOnTuro'), href: 'https://turo.com/us/en/host/14886572' },
     { icon: Mail, label: t('contact.emailLbl'), value: 'info@thevanrental.com', href: 'mailto:info@thevanrental.com' },
     { icon: MapPin, label: t('contact.serviceAreaLbl'), value: t('contact.serviceAreaVal'), href: '#' },
   ]
@@ -61,7 +61,7 @@ export function Contact() {
                 <h2 className="text-3xl font-medium mb-5">Check live availability on Turo</h2>
                 <p className="text-zinc-400 font-light leading-relaxed">Choose a vehicle, see the exact price for your dates, review delivery options, and complete your reservation securely.</p>
               </div>
-              <a href="https://turo.com/us/en/drivers/14886572" target="_blank" rel="noopener noreferrer" className="mt-10 bg-white text-zinc-900 h-14 px-8 inline-flex items-center justify-center gap-2 font-medium group">
+              <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="mt-10 bg-white text-zinc-900 h-14 px-8 inline-flex items-center justify-center gap-2 font-medium group">
                 {t('nav.bookOnTuro')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

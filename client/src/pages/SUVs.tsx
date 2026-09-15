@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -7,9 +8,10 @@ const GLC_LISTINGS = [
   { img: '/images/glcb.jpeg', url: 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3003416' },
   { img: '/images/glcb1.jpeg', url: 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3142732' },
   { img: '/images/glcb2.jpeg', url: 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3307505' },
-  { img: '/images/glcw.jpeg', url: 'https://turo.com/us/en/suv-rental/united-states/undefined-undefined/mercedes-benz/glc-class/3262667' },
+  { img: '/images/glcw.jpeg', url: 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3262667' },
 ]
 
+const GLE_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3907726'
 const GLB_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glb-class/2204008'
 const BMW_URL = 'https://turo.com/us/en/car-rental/united-states/santa-ana-ca/bmw/5-series/3544320'
 
@@ -17,8 +19,8 @@ export function SUVs() {
   const { t } = useTranslation()
 
   useSEO({
-    title: 'Mercedes GLC & GLB SUV Rental | The Van Rental',
-    description: 'Rent a Mercedes GLC or GLB SUV in Southern California. Premium executive vehicles for airport transfers, business travel, and client transport. Delivery to LAX, SNA, ONT.',
+    title: 'Mercedes GLC & GLE SUV Rental | The Van Rental',
+    description: 'Rent a Mercedes GLC or GLE SUV in Southern California. Premium vehicles for airport transfers, business travel, and family trips. Delivery to LAX, SNA, ONT.',
     canonical: 'https://www.thevanrental.com/suvs',
   })
 
@@ -49,6 +51,21 @@ export function SUVs() {
                 <img src={t2.img} alt="Mercedes GLC" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </a>
             ))}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-zinc-950 text-white p-8 lg:p-12 mb-20">
+            <Link to="/mercedes-gle" className="block aspect-[4/3] overflow-hidden bg-zinc-900 group">
+              <img src="/images/gle-front.jpg" alt="2022 Mercedes-Benz GLE 350" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+            </Link>
+            <div>
+              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-4">Featured midsize SUV</div>
+              <h2 className="text-4xl font-medium tracking-tight mb-6">2022 Mercedes-Benz GLE 350</h2>
+              <p className="text-zinc-400 font-light leading-relaxed mb-8">A spacious, refined Mercedes-Benz SUV with five seats, Apple CarPlay, a panoramic sunroof, driver-assistance technology, and convenient Southern California delivery.</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/mercedes-gle" className="inline-flex items-center bg-white text-zinc-950 text-sm font-medium px-6 py-3 hover:bg-zinc-200 transition-colors">Explore the GLE</Link>
+                <a href={GLE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-zinc-700 text-white text-sm font-medium px-6 py-3 hover:border-zinc-400 transition-colors">Book on Turo</a>
+              </div>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-20">

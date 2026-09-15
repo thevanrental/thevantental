@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Vans } from './pages/Vans'
 import { SUVs } from './pages/SUVs'
+import { MercedesGLE } from './pages/MercedesGLE'
 import { Hybrid } from './pages/Hybrid'
 import { Contact } from './pages/Contact'
 import { Reviews } from './pages/Reviews'
@@ -25,6 +26,7 @@ export function App() {
         <Route path="/" element={<Home />} />
         <Route path="/vans" element={<Vans />} />
         <Route path="/suvs" element={<SUVs />} />
+        <Route path="/mercedes-gle" element={<MercedesGLE />} />
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/contact" element={<Contact />} />

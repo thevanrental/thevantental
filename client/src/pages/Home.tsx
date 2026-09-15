@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { ChevronRight, ArrowRight, MapPin, Truck, Users, Fuel, Package, CarFront, BarChart3, KeyRound } from 'lucide-react'
+import { ChevronRight, ArrowRight, MapPin, CarFront, BarChart3, KeyRound } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
@@ -11,28 +11,9 @@ export function Home() {
 
   useSEO({
     title: 'The Van Rental — Premium Vehicle Rentals in Southern California',
-    description: 'Mercedes-Benz Sprinter 9-passenger van, cargo vans, crew vans, GLC SUVs, Highlander hybrid, Silverado 1500. Diesel fleet for film crews, groups, e-bikes, kayaks & executive travel in Southern California.',
+    description: 'Mercedes-Benz GLC and GLE premium SUV rentals for airport arrivals, executive travel, family weekends, and Southern California drives.',
     canonical: 'https://www.thevanrental.com/',
   })
-
-  const vans = [
-    {
-      tag: t('home.vans.cargo.tag'),
-      type: t('home.vans.cargo.type'),
-      desc: t('home.vans.cargo.desc'),
-      specs: t('home.vans.cargo.specs', { returnObjects: true }) as string[],
-      badge: '',
-      img: '/images/cargo.jpeg',
-    },
-    {
-      tag: t('home.vans.crew.tag'),
-      type: t('home.vans.crew.type'),
-      desc: t('home.vans.crew.desc'),
-      specs: t('home.vans.crew.specs', { returnObjects: true }) as string[],
-      badge: t('home.vans.crew.badge'),
-      img: '/images/crew.jpeg',
-    },
-  ]
 
   const silveradoSpecs = t('home.silverado.specs', { returnObjects: true }) as string[]
 
@@ -62,19 +43,19 @@ export function Home() {
               {t('home.hero.desc')}
             </p>
             <div className="flex items-center gap-4 pt-2">
-              <Link to="/vans" className="bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium flex items-center">
-                {t('common.viewFleet')}
+              <Link to="/mercedes-gle" className="bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium flex items-center">
+                Explore the GLE 350
               </Link>
-              <Link to="/trucks" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
-                <Truck className="w-4 h-4" /> {t('home.hero.silveradoBtn')}
+              <Link to="/suvs" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
+                <CarFront className="w-4 h-4" /> Explore the GLC
               </Link>
             </div>
           </div>
           <div className="w-full lg:w-1/2">
             <div className="relative aspect-[4/3] bg-zinc-50 w-full overflow-hidden">
               <img
-                src="/images/hero.jpeg"
-                alt="Premium vehicle fleet"
+                src="/images/gle-front.jpg"
+                alt="2022 Mercedes-Benz GLE 350 premium SUV"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
               />
             </div>
@@ -141,15 +122,15 @@ export function Home() {
         </div>
       </section>
 
-      {/* Sprinter 9-passenger — featured strip */}
+      {/* Mercedes GLC — featured strip */}
       <section className="py-0 border-y border-zinc-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[540px]">
 
             <div className="relative overflow-hidden bg-zinc-900 order-2 lg:order-1">
               <img
-                src="/images/sprinter-exterior.png"
-                alt="Mercedes-Benz Sprinter 9-passenger black van"
+                src="/images/glcb.jpeg"
+                alt="Mercedes-Benz GLC premium SUV"
                 className="absolute inset-0 w-full h-full object-cover opacity-80"
               />
               <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/60 to-transparent" />
@@ -157,40 +138,37 @@ export function Home() {
 
             <div className="flex flex-col justify-center px-12 py-16 order-1 lg:order-2">
               <div className="inline-flex items-center gap-2 text-[10px] font-medium tracking-widest uppercase bg-zinc-900 text-white px-3 py-1.5 w-fit mb-6">
-                {t('home.sprinter.badge')}
+                Premium SUV
               </div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-3">{t('home.sprinter.eyebrow')}</div>
+              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-3">Mercedes-Benz GLC</div>
               <h2 className="text-4xl lg:text-5xl font-medium tracking-tighter leading-tight mb-6">
-                {t('home.sprinter.h2a')}<br />
-                <span className="text-zinc-400">{t('home.sprinter.h2b')}</span>
+                GLC comfort.<br />
+                <span className="text-zinc-400">Made for the city.</span>
               </h2>
               <p className="text-zinc-500 font-light text-lg leading-relaxed mb-6">
-                {t('home.sprinter.desc')}
+                A refined, easy-to-place SUV for airport pickups, business travel, coastal weekends, and everyday Southern California driving.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
-                {(['tag1','tag2','tag3','tag4','tag5'] as const).map(k => (
-                  <span key={k} className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 border border-zinc-200 px-3 py-1.5">
-                    {k === 'tag1' && <Users className="w-3 h-3" />}
-                    {k === 'tag2' && <Fuel className="w-3 h-3" />}
-                    {k === 'tag3' && <Package className="w-3 h-3" />}
-                    {t(`home.sprinter.${k}`)}
+                {['Premium interior', 'Parking assistance', 'Executive travel', 'Airport delivery'].map(item => (
+                  <span key={item} className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 border border-zinc-200 px-3 py-1.5">
+                    {item}
                   </span>
                 ))}
               </div>
               <div className="flex items-center gap-4">
                 <Link
-                  to="/sprinter"
+                  to="/suvs"
                   className="inline-flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-12 px-8 text-sm font-medium group"
                 >
-                  {t('common.learnMore')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  Explore the GLC <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <a
-                  href="https://turo.com/us/en/van-rental/united-states/brea-ca/mercedes-benz/sprinter-crew/3043514"
+                  href="https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3262667"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 border border-zinc-200 hover:border-zinc-400 transition-colors h-12 px-8 text-sm font-medium"
                 >
-                  {t('home.sprinter.bookBtn')}
+                  Book on Turo
                 </a>
               </div>
             </div>
@@ -199,44 +177,37 @@ export function Home() {
         </div>
       </section>
 
-      {/* Mercedes Vans — dark section */}
+      {/* Mercedes SUVs — dark section */}
       <section className="py-28 bg-zinc-950 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-6">{t('home.vans.eyebrow')}</div>
+              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-6">Mercedes-Benz · GLC & GLE</div>
               <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-8 leading-tight">
-                {t('home.vans.h2a')}<br />{t('home.vans.h2b')}<br />{t('home.vans.h2c')}
+                Two premium SUVs.<br />One effortless experience.
               </h2>
               <p className="text-zinc-400 font-light text-lg leading-relaxed mb-12">
-                {t('home.vans.desc')}
+                Choose the agile GLC for city travel or the roomier GLE 350 for longer drives. Both deliver composed Mercedes-Benz comfort.
               </p>
-              <Link to="/vans" className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-100 transition-colors h-12 px-8 text-sm font-medium group">
-                {t('home.vans.exploreBtn')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              <Link to="/suvs" className="inline-flex items-center gap-2 bg-white text-zinc-900 hover:bg-zinc-100 transition-colors h-12 px-8 text-sm font-medium group">
+                Explore Mercedes SUVs <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
             <div className="flex flex-col gap-6">
-              {vans.map((van, i) => (
-                <Link key={i} to="/vans" className="border border-zinc-800 p-8 relative group hover:border-zinc-600 transition-colors block">
-                  {van.badge && (
-                    <div className="absolute top-4 right-4 text-[10px] font-medium tracking-widest uppercase text-zinc-500 border border-zinc-700 px-2 py-1">
-                      {van.badge}
-                    </div>
-                  )}
+              {[
+                { to: '/suvs', tag: 'Compact premium SUV', type: 'Mercedes-Benz GLC', desc: 'Refined comfort, confident road manners, and an airport-friendly size.', img: '/images/glcb1.jpeg' },
+                { to: '/mercedes-gle', tag: 'Midsize premium SUV', type: 'Mercedes-Benz GLE 350', desc: 'More space for family weekends, executive trips, and longer California drives.', img: '/images/gle-rear.jpg' },
+              ].map((vehicle) => (
+                <Link key={vehicle.type} to={vehicle.to} className="border border-zinc-800 p-8 relative group hover:border-zinc-600 transition-colors block">
                   <div className="flex gap-6 mb-6">
-                    <img src={van.img} alt={van.type} className="w-28 h-20 object-cover flex-shrink-0 opacity-70" />
+                    <img src={vehicle.img} alt={vehicle.type} className="w-28 h-20 object-cover flex-shrink-0 opacity-70" />
                     <div>
-                      <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-1">{van.tag}</div>
-                      <h3 className="text-2xl font-medium">{van.type}</h3>
+                      <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-1">{vehicle.tag}</div>
+                      <h3 className="text-2xl font-medium">{vehicle.type}</h3>
                     </div>
                   </div>
-                  <p className="text-zinc-400 font-light text-sm leading-relaxed mb-5">{van.desc}</p>
-                  <div className="flex flex-wrap gap-2">
-                    {van.specs.map((s, j) => (
-                      <span key={j} className="text-xs text-zinc-500 border border-zinc-800 px-3 py-1">{s}</span>
-                    ))}
-                  </div>
+                  <p className="text-zinc-400 font-light text-sm leading-relaxed">{vehicle.desc}</p>
                 </Link>
               ))}
             </div>
@@ -348,21 +319,21 @@ export function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-            {/* Silverado — dark card */}
-            <Link to="/trucks" className="group bg-zinc-900 text-white p-8 block relative">
+            {/* GLE — dark card */}
+            <Link to="/mercedes-gle" className="group bg-zinc-900 text-white p-8 block relative">
               <div className="absolute top-4 right-4 text-[10px] font-medium tracking-widest uppercase text-zinc-400 border border-zinc-700 px-2 py-1">
-                {t('home.fleet.silverado.badge')}
+                New
               </div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-2">{t('home.fleet.silverado.eyebrow')}</div>
-              <h3 className="text-3xl font-medium tracking-tight mb-4">{t('home.fleet.silverado.h3')}</h3>
+              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-2">Mercedes-Benz</div>
+              <h3 className="text-3xl font-medium tracking-tight mb-4">GLE 350</h3>
               <p className="text-zinc-400 font-light text-sm leading-relaxed mb-8">
-                {t('home.fleet.silverado.desc')}
+                Midsize premium comfort, generous space, and refined technology for longer Southern California drives.
               </p>
               <div className="aspect-video overflow-hidden mb-6 bg-zinc-800">
-                <img src="/images/silverado2.jpeg" alt="Chevrolet Silverado 1500 LTZ" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
+                <img src="/images/gle-front.jpg" alt="2022 Mercedes-Benz GLE 350" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
               </div>
               <span className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
-                {t('home.fleet.silverado.link')} <ArrowRight className="w-4 h-4" />
+                Explore GLE <ArrowRight className="w-4 h-4" />
               </span>
             </Link>
 

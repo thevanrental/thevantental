@@ -4,16 +4,32 @@ import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 import { useSEO } from '../hooks/useSEO'
 
+const TURO_REVIEWS = [
+  {
+    name: 'Brittany',
+    date: 'September 13, 2026',
+    text: 'Our host was amazing, helpful, informative and friendly! The car was clean and in great condition. Would absolutely rent again',
+  },
+  {
+    name: 'William',
+    date: 'September 9, 2026',
+    text: 'This vehicle and trip were great. Awesome host, easy pickup and drop-off, and very communicative. Recommended to anyone! Renting again soon.',
+  },
+  {
+    name: 'Tiffany',
+    date: 'September 1, 2026',
+    text: 'What a great experience. From pick up to drop off, host made everything easy!',
+  },
+]
+
 export function Reviews() {
   const { t } = useTranslation()
 
   useSEO({
     title: 'Customer Reviews | The Van Rental',
-    description: '5.0 stars on Google. Read what film producers, event coordinators, and business travelers say about renting from The Van Rental in Southern California.',
+    description: 'Read selected five-star Turo guest feedback for The Van Rental, a 5.0 All-Star Host with 579 reviews and 638 trips.',
     canonical: 'https://www.thevanrental.com/reviews',
   })
-
-  const items = t('reviews.items', { returnObjects: true }) as { name: string; role: string; text: string }[]
 
   return (
     <div className="min-h-screen bg-white text-zinc-900">
@@ -24,7 +40,7 @@ export function Reviews() {
             <div>
               <h1 className="text-5xl lg:text-7xl font-medium tracking-tighter mb-6">{t('reviews.h1')}</h1>
               <p className="text-xl text-zinc-500 font-light max-w-xl leading-relaxed">
-                {t('reviews.subtitle')}
+                5.0 on Turo · 579 reviews · 638 trips
               </p>
             </div>
             <div className="flex items-center gap-1 mb-2">
@@ -34,7 +50,7 @@ export function Reviews() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((r, i) => (
+            {TURO_REVIEWS.map((r, i) => (
               <div key={i} className="bg-zinc-50 p-8 flex flex-col gap-5">
                 <div className="flex gap-0.5">
                   {[...Array(5)].map((_, j) => <Star key={j} className="w-4 h-4 fill-zinc-900 text-zinc-900" />)}
@@ -42,10 +58,15 @@ export function Reviews() {
                 <p className="text-zinc-600 font-light text-sm leading-relaxed flex-1">"{r.text}"</p>
                 <div>
                   <div className="font-medium text-sm">{r.name}</div>
-                  <div className="text-xs text-zinc-400">{r.role}</div>
+                  <div className="text-xs text-zinc-400">{r.date} · Verified Turo guest</div>
                 </div>
               </div>
             ))}
+          </div>
+          <div className="mt-12">
+            <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="inline-flex items-center bg-zinc-900 text-white h-12 px-7 text-sm font-medium hover:bg-zinc-800 transition-colors">
+              View our Turo profile
+            </a>
           </div>
         </div>
       </section>
