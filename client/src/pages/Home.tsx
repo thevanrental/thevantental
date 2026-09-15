@@ -26,39 +26,41 @@ export function Home() {
 
   return (
     <div className="min-h-screen bg-white text-zinc-900">
-      <Nav />
+      <Nav overlay />
 
       {/* Hero */}
-      <section className="pt-16 pb-24 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
-          <div className="w-full lg:w-1/2 flex flex-col gap-8">
-            <div className="inline-flex items-center gap-2 text-xs font-medium tracking-widest uppercase text-zinc-400 border border-zinc-200 px-3 py-1.5 w-fit">
+      <section className="relative min-h-[92svh] lg:min-h-screen overflow-hidden bg-zinc-950 text-white flex items-end">
+        <img
+          src="/images/gle-front.jpg"
+          alt="2022 Mercedes-Benz GLE 350 premium SUV in Southern California"
+          className="absolute inset-0 h-full w-full object-cover object-[58%_center] scale-[1.02]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/25" />
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 pb-28 pt-32 lg:pt-28">
+          <div className="max-w-3xl">
+            <div className="text-[11px] font-semibold tracking-[0.28em] uppercase text-white/75 mb-7">
               {t('home.hero.location')}
             </div>
-            <h1 className="text-5xl lg:text-7xl font-medium tracking-tighter leading-[1.05]">
+            <h1 className="font-display text-[4.25rem] sm:text-7xl lg:text-[6.25rem] tracking-[-0.045em] leading-[0.84] mb-8">
               {t('home.hero.h1a')}<br />
-              <span className="text-zinc-400">{t('home.hero.h1b')}</span>
+              <span className="italic font-normal text-[#e7a77a]">{t('home.hero.h1b')}</span>
             </h1>
-            <p className="text-xl text-zinc-500 font-light max-w-md leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/80 font-light max-w-xl leading-relaxed mb-9">
               {t('home.hero.desc')}
             </p>
-            <div className="flex items-center gap-4 pt-2">
-              <Link to="/mercedes-gle" className="bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-14 px-8 text-base font-medium flex items-center">
+            <div className="flex flex-wrap items-center gap-3">
+              <Link to="/mercedes-gle" className="bg-[#df7748] text-white hover:bg-[#ca683c] transition-colors h-14 px-8 text-sm font-semibold tracking-wide uppercase flex items-center rounded-full">
                 Explore the GLE 350
               </Link>
-              <Link to="/suvs" className="border border-zinc-200 hover:border-zinc-400 transition-colors h-14 px-8 text-base font-medium flex items-center gap-2">
-                <CarFront className="w-4 h-4" /> Explore the GLC
+              <Link to="/suvs" className="border border-white/50 hover:border-white bg-black/10 hover:bg-white/10 transition-colors h-14 px-8 text-sm font-semibold tracking-wide uppercase flex items-center gap-2 rounded-full">
+                Explore the GLC <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
-          <div className="w-full lg:w-1/2">
-            <div className="relative aspect-[4/3] bg-zinc-50 w-full overflow-hidden">
-              <img
-                src="/images/gle-front.jpg"
-                alt="2022 Mercedes-Benz GLE 350 premium SUV"
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-1000"
-              />
-            </div>
+          <div className="absolute bottom-0 left-6 right-6 border-t border-white/20 py-5 flex items-center justify-between text-[10px] sm:text-xs font-semibold tracking-[0.2em] uppercase text-white/65">
+            <span>Mercedes-Benz GLE 350</span>
+            <span className="hidden sm:block">GLC · GLE · Southern California</span>
           </div>
         </div>
       </section>
@@ -123,34 +125,32 @@ export function Home() {
       </section>
 
       {/* Mercedes GLC — featured strip */}
-      <section className="py-0 border-y border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[540px]">
-
-            <div className="relative overflow-hidden bg-zinc-900 order-2 lg:order-1">
+      <section className="relative min-h-[78svh] overflow-hidden bg-zinc-950 text-white flex items-end">
+            <div className="absolute inset-0 overflow-hidden bg-zinc-900">
               <img
                 src="/images/glcb.jpeg"
                 alt="Mercedes-Benz GLC premium SUV"
-                className="absolute inset-0 w-full h-full object-cover opacity-80"
+                className="absolute inset-0 w-full h-full object-cover object-center"
               />
-              <div className="absolute inset-0 bg-gradient-to-r from-zinc-900/60 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/35 to-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/20" />
             </div>
-
-            <div className="flex flex-col justify-center px-12 py-16 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 text-[10px] font-medium tracking-widest uppercase bg-zinc-900 text-white px-3 py-1.5 w-fit mb-6">
+            <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-16 lg:py-24">
+              <div className="max-w-xl">
+              <div className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase border border-white/35 text-white px-4 py-2 w-fit mb-6">
                 Premium SUV
               </div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-3">Mercedes-Benz GLC</div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tighter leading-tight mb-6">
+              <div className="text-xs font-semibold tracking-[0.2em] uppercase text-white/55 mb-3">Mercedes-Benz GLC</div>
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-6">
                 GLC comfort.<br />
-                <span className="text-zinc-400">Made for the city.</span>
+                <span className="italic text-[#e7a77a]">Made for the city.</span>
               </h2>
-              <p className="text-zinc-500 font-light text-lg leading-relaxed mb-6">
+              <p className="text-white/75 font-light text-lg leading-relaxed mb-6">
                 A refined, easy-to-place SUV for airport pickups, business travel, coastal weekends, and everyday Southern California driving.
               </p>
               <div className="flex flex-wrap gap-2 mb-8">
                 {['Premium interior', 'Parking assistance', 'Executive travel', 'Airport delivery'].map(item => (
-                  <span key={item} className="inline-flex items-center gap-1.5 text-xs font-medium text-zinc-600 border border-zinc-200 px-3 py-1.5">
+                  <span key={item} className="inline-flex items-center gap-1.5 text-xs font-medium text-white/75 border border-white/25 bg-black/15 px-3 py-1.5">
                     {item}
                   </span>
                 ))}
@@ -158,7 +158,7 @@ export function Home() {
               <div className="flex items-center gap-4">
                 <Link
                   to="/suvs"
-                  className="inline-flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-12 px-8 text-sm font-medium group"
+                  className="inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-white/85 transition-colors h-12 px-8 text-sm font-semibold group rounded-full"
                 >
                   Explore the GLC <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -166,24 +166,22 @@ export function Home() {
                   href="https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glc-class/3262667"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-zinc-200 hover:border-zinc-400 transition-colors h-12 px-8 text-sm font-medium"
+                  className="inline-flex items-center gap-2 border border-white/40 hover:border-white transition-colors h-12 px-8 text-sm font-medium rounded-full"
                 >
                   Book on Turo
                 </a>
               </div>
+              </div>
             </div>
-
-          </div>
-        </div>
       </section>
 
       {/* Mercedes SUVs — dark section */}
-      <section className="py-28 bg-zinc-950 text-white">
+      <section className="py-24 lg:py-32 bg-[#11100f] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
               <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-6">Mercedes-Benz · GLC & GLE</div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-8 leading-tight">
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight mb-8 leading-[0.94]">
                 Two premium SUVs.<br />One effortless experience.
               </h2>
               <p className="text-zinc-400 font-light text-lg leading-relaxed mb-12">
@@ -194,20 +192,20 @@ export function Home() {
               </Link>
             </div>
 
-            <div className="flex flex-col gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { to: '/suvs', tag: 'Compact premium SUV', type: 'Mercedes-Benz GLC', desc: 'Refined comfort, confident road manners, and an airport-friendly size.', img: '/images/glcb1.jpeg' },
                 { to: '/mercedes-gle', tag: 'Midsize premium SUV', type: 'Mercedes-Benz GLE 350', desc: 'More space for family weekends, executive trips, and longer California drives.', img: '/images/gle-rear.jpg' },
               ].map((vehicle) => (
-                <Link key={vehicle.type} to={vehicle.to} className="border border-zinc-800 p-8 relative group hover:border-zinc-600 transition-colors block">
-                  <div className="flex gap-6 mb-6">
-                    <img src={vehicle.img} alt={vehicle.type} className="w-28 h-20 object-cover flex-shrink-0 opacity-70" />
-                    <div>
-                      <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-1">{vehicle.tag}</div>
-                      <h3 className="text-2xl font-medium">{vehicle.type}</h3>
-                    </div>
+                <Link key={vehicle.type} to={vehicle.to} className="relative min-h-[420px] overflow-hidden group block border border-white/10">
+                  <img src={vehicle.img} alt={vehicle.type} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/25 to-black/5" />
+                  <div className="absolute inset-x-0 bottom-0 p-7">
+                    <div className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/55 mb-2">{vehicle.tag}</div>
+                    <h3 className="font-display text-3xl mb-3">{vehicle.type}</h3>
+                    <p className="text-white/65 font-light text-sm leading-relaxed mb-5">{vehicle.desc}</p>
+                    <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
                   </div>
-                  <p className="text-zinc-400 font-light text-sm leading-relaxed">{vehicle.desc}</p>
                 </Link>
               ))}
             </div>

@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { LanguageSwitcher } from './LanguageSwitcher'
 
-export function Nav() {
+export function Nav({ overlay = false }: { overlay?: boolean }) {
   const [open, setOpen] = React.useState(false)
   const location = useLocation()
   const { t } = useTranslation()
@@ -21,16 +21,16 @@ export function Nav() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-zinc-100">
+    <header className={`${overlay ? 'absolute top-0 left-0 w-full text-white border-b border-white/15 bg-gradient-to-b from-black/55 to-transparent' : 'sticky top-0 bg-white/90 border-b border-zinc-100'} z-50 backdrop-blur-[2px]`}>
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="text-xl font-medium tracking-tight">THE VAN RENTAL</Link>
 
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-zinc-500">
+        <nav className={`hidden lg:flex items-center gap-8 text-sm font-medium ${overlay ? 'text-white/65' : 'text-zinc-500'}`}>
           {links.map(l => (
             <Link
               key={l.to}
               to={l.to}
-              className={`transition-colors hover:text-zinc-900 ${location.pathname === l.to ? 'text-zinc-900' : ''}`}
+              className={`transition-colors ${overlay ? 'hover:text-white' : 'hover:text-zinc-900'} ${location.pathname === l.to ? (overlay ? 'text-white' : 'text-zinc-900') : ''}`}
             >
               {l.label}
             </Link>
@@ -43,11 +43,11 @@ export function Nav() {
               href="https://turo.com/us/en/host/14886572"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-zinc-900 text-white text-sm font-medium px-6 h-9 flex items-center hover:bg-zinc-800 transition-colors whitespace-nowrap"
+              className={`${overlay ? 'bg-white text-zinc-950 hover:bg-white/85' : 'bg-zinc-900 text-white hover:bg-zinc-800'} text-sm font-medium px-6 h-9 flex items-center transition-colors whitespace-nowrap`}
             >
               {t('nav.bookOnTuro')}
             </a>
-            <LanguageSwitcher />
+            <LanguageSwitcher dark={overlay} />
           </div>
         </div>
 

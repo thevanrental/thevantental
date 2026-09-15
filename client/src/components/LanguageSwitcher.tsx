@@ -8,7 +8,7 @@ const LANGS = [
   { code: 'uk', label: 'UK' },
 ]
 
-export function LanguageSwitcher() {
+export function LanguageSwitcher({ dark = false }: { dark?: boolean }) {
   const { i18n } = useTranslation()
 
   const change = (code: string) => {
@@ -24,11 +24,11 @@ export function LanguageSwitcher() {
           onClick={() => change(l.code)}
           className={`text-[11px] font-medium px-1.5 py-1 tracking-wide transition-colors ${
             i18n.language === l.code
-              ? 'text-zinc-900'
-              : 'text-zinc-400 hover:text-zinc-600'
+              ? dark ? 'text-white' : 'text-zinc-900'
+              : dark ? 'text-white/50 hover:text-white' : 'text-zinc-400 hover:text-zinc-600'
           }`}
         >
-          {l.label}{idx < LANGS.length - 1 && <span className="ml-0.5 text-zinc-200">·</span>}
+          {l.label}{idx < LANGS.length - 1 && <span className={`ml-0.5 ${dark ? 'text-white/20' : 'text-zinc-200'}`}>·</span>}
         </button>
       ))}
     </div>
