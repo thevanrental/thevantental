@@ -214,13 +214,13 @@ export function Home() {
       </section>
 
       {/* Extras */}
-      <section className="py-24 bg-zinc-50">
+      <section className="py-24 lg:py-32 bg-[#11100f] text-white">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-6">{t('extras.eyebrow')}</div>
+          <div className="text-xs font-medium tracking-[0.22em] uppercase text-white/45 mb-6">{t('extras.eyebrow')}</div>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8 mb-12">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-4">{t('extras.h2')}</h2>
-              <p className="text-xl text-zinc-500 font-light max-w-xl leading-relaxed">{t('extras.desc')}</p>
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-5">{t('extras.h2')}</h2>
+              <p className="text-xl text-white/55 font-light max-w-xl leading-relaxed">{t('extras.desc')}</p>
             </div>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -230,16 +230,15 @@ export function Home() {
               { key: 'cooler',   img: '/images/extra-cooler.jpg'   },
               { key: 'ebike',    img: '/images/extra-ebike.jpg'    },
             ] as const).map(({ key, img }) => (
-              <div key={key} className="bg-white border border-zinc-100 overflow-hidden hover:border-zinc-300 transition-colors group">
-                <div className="aspect-[4/3] overflow-hidden bg-zinc-50">
-                  <img src={img} alt={t(`extras.${key}.name`)} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="p-6">
-                  <div className="text-[10px] font-medium tracking-widest uppercase text-zinc-400 mb-2">
+              <div key={key} className="relative min-h-[380px] overflow-hidden border border-white/10 group">
+                <img src={img} alt={t(`extras.${key}.name`)} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-black/5" />
+                <div className="absolute inset-x-0 bottom-0 p-6">
+                  <div className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/50 mb-2">
                     {t(`extras.${key}.tag`)}
                   </div>
-                  <div className="font-medium mb-2">{t(`extras.${key}.name`)}</div>
-                  <p className="text-zinc-500 font-light text-sm leading-relaxed">{t(`extras.${key}.desc`)}</p>
+                  <div className="font-display text-3xl mb-2">{t(`extras.${key}.name`)}</div>
+                  <p className="text-white/65 font-light text-sm leading-relaxed">{t(`extras.${key}.desc`)}</p>
                 </div>
               </div>
             ))}
@@ -248,40 +247,38 @@ export function Home() {
       </section>
 
       {/* Silverado featured strip */}
-      <section className="py-0 border-y border-zinc-100">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 min-h-[520px]">
-
-            <div className="relative overflow-hidden bg-zinc-100 order-2 lg:order-1">
+      <section className="relative min-h-[82svh] overflow-hidden bg-zinc-950 text-white flex items-end">
+            <div className="absolute inset-0 overflow-hidden">
               <img
                 src="/images/silverado.jpeg"
                 alt="2022 Chevrolet Silverado 1500 LTZ"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-zinc-900/20" />
+              <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/45 to-black/10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
             </div>
-
-            <div className="flex flex-col justify-center px-12 py-16 order-1 lg:order-2">
-              <div className="inline-flex items-center gap-2 text-[10px] font-medium tracking-widest uppercase bg-zinc-900 text-white px-3 py-1.5 w-fit mb-6">
+            <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-16 lg:py-24">
+              <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 text-[10px] font-semibold tracking-[0.22em] uppercase border border-white/35 px-4 py-2 w-fit mb-6">
                 {t('home.silverado.badge')}
               </div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-3">{t('home.silverado.eyebrow')}</div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tighter leading-tight mb-6">
+              <div className="text-xs font-semibold tracking-[0.2em] uppercase text-white/55 mb-3">{t('home.silverado.eyebrow')}</div>
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-6">
                 {t('home.silverado.h2a')}<br />
-                <span className="text-zinc-400">{t('home.silverado.h2b')}</span>
+                <span className="italic text-[#e7a77a]">{t('home.silverado.h2b')}</span>
               </h2>
-              <p className="text-zinc-500 font-light text-lg leading-relaxed mb-4">
+              <p className="text-white/70 font-light text-lg leading-relaxed mb-5 max-w-xl">
                 {t('home.silverado.desc')}
               </p>
               <div className="flex flex-wrap gap-2 mb-10">
                 {silveradoSpecs.map((s) => (
-                  <span key={s} className="text-xs font-medium text-zinc-500 border border-zinc-200 px-3 py-1.5">{s}</span>
+                  <span key={s} className="text-xs font-medium text-white/70 border border-white/25 bg-black/15 px-3 py-1.5">{s}</span>
                 ))}
               </div>
               <div className="flex items-center gap-4">
                 <Link
                   to="/trucks"
-                  className="inline-flex items-center gap-2 bg-zinc-900 text-white hover:bg-zinc-800 transition-colors h-12 px-8 text-sm font-medium group"
+                  className="inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-white/85 transition-colors h-12 px-8 text-sm font-semibold group rounded-full"
                 >
                   {t('home.silverado.seeBtn')} <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
@@ -289,24 +286,23 @@ export function Home() {
                   href="https://turo.com/us/en/truck-rental/united-states/brea-ca/chevrolet/silverado-1500/3689421"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 border border-zinc-200 hover:border-zinc-400 transition-colors h-12 px-8 text-sm font-medium"
+                  className="inline-flex items-center gap-2 border border-white/40 hover:border-white transition-colors h-12 px-8 text-sm font-medium rounded-full"
                 >
                   {t('home.silverado.bookBtn')}
                 </a>
               </div>
+              </div>
             </div>
-
-          </div>
-        </div>
       </section>
 
       {/* Full Fleet */}
-      <section className="py-28 bg-zinc-50">
+      <section className="py-24 lg:py-32 bg-[#e9e3dc]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-4">{t('home.fleet.h2')}</h2>
-              <p className="text-zinc-500 font-light text-lg max-w-md">
+              <div className="text-xs font-semibold tracking-[0.22em] uppercase text-zinc-500 mb-5">Mercedes-Benz · Toyota</div>
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-5">{t('home.fleet.h2')}</h2>
+              <p className="text-zinc-600 font-light text-lg max-w-md">
                 {t('home.fleet.desc')}
               </p>
             </div>
@@ -315,67 +311,37 @@ export function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-
-            {/* GLE — dark card */}
-            <Link to="/mercedes-gle" className="group bg-zinc-900 text-white p-8 block relative">
-              <div className="absolute top-4 right-4 text-[10px] font-medium tracking-widest uppercase text-zinc-400 border border-zinc-700 px-2 py-1">
-                New
-              </div>
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-500 mb-2">Mercedes-Benz</div>
-              <h3 className="text-3xl font-medium tracking-tight mb-4">GLE 350</h3>
-              <p className="text-zinc-400 font-light text-sm leading-relaxed mb-8">
-                Midsize premium comfort, generous space, and refined technology for longer Southern California drives.
-              </p>
-              <div className="aspect-video overflow-hidden mb-6 bg-zinc-800">
-                <img src="/images/gle-front.jpg" alt="2022 Mercedes-Benz GLE 350" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <span className="inline-flex items-center gap-2 text-sm font-medium group-hover:gap-3 transition-all">
-                Explore GLE <ArrowRight className="w-4 h-4" />
-              </span>
-            </Link>
-
-            <Link to="/suvs" className="group bg-white border border-zinc-200 p-8 block">
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">{t('home.fleet.glc.eyebrow')}</div>
-              <h3 className="text-3xl font-medium tracking-tight mb-4">{t('home.fleet.glc.h3')}</h3>
-              <p className="text-zinc-500 font-light text-sm leading-relaxed mb-8">
-                {t('home.fleet.glc.desc')}
-              </p>
-              <div className="aspect-video overflow-hidden mb-6 bg-zinc-100">
-                <img src="/images/glcb.jpeg" alt="Mercedes GLC" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 group-hover:gap-3 transition-all">
-                {t('home.fleet.glc.link')} <ArrowRight className="w-4 h-4" />
-              </span>
-            </Link>
-
-            <Link to="/hybrid" className="group bg-white border border-zinc-200 p-8 block">
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-2">{t('home.fleet.highlander.eyebrow')}</div>
-              <h3 className="text-3xl font-medium tracking-tight mb-4">{t('home.fleet.highlander.h3')}</h3>
-              <p className="text-zinc-500 font-light text-sm leading-relaxed mb-8">
-                {t('home.fleet.highlander.desc')}
-              </p>
-              <div className="aspect-video overflow-hidden mb-6 bg-zinc-50">
-                <img src="/images/highlander.jpeg" alt="Toyota Highlander" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </div>
-              <span className="inline-flex items-center gap-2 text-sm font-medium text-zinc-900 group-hover:gap-3 transition-all">
-                {t('home.fleet.highlander.link')} <ArrowRight className="w-4 h-4" />
-              </span>
-            </Link>
-
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {[
+              { to: '/mercedes-gle', eyebrow: 'Mercedes-Benz · New', name: 'GLE 350', desc: 'Midsize premium comfort, generous space, and refined technology for longer Southern California drives.', img: '/images/gle-front.jpg' },
+              { to: '/suvs', eyebrow: t('home.fleet.glc.eyebrow'), name: t('home.fleet.glc.h3'), desc: t('home.fleet.glc.desc'), img: '/images/glcb1.jpeg' },
+              { to: '/hybrid', eyebrow: t('home.fleet.highlander.eyebrow'), name: t('home.fleet.highlander.h3'), desc: t('home.fleet.highlander.desc'), img: '/images/highlander.jpeg' },
+            ].map((vehicle) => (
+              <Link key={vehicle.name} to={vehicle.to} className="group relative min-h-[520px] overflow-hidden text-white block">
+                <img src={vehicle.img} alt={vehicle.name} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/25 to-black/5" />
+                <div className="absolute inset-x-0 bottom-0 p-7 lg:p-9">
+                  <div className="text-[10px] font-semibold tracking-[0.2em] uppercase text-white/55 mb-3">{vehicle.eyebrow}</div>
+                  <h3 className="font-display text-4xl mb-4">{vehicle.name}</h3>
+                  <p className="text-white/65 font-light text-sm leading-relaxed mb-6">{vehicle.desc}</p>
+                  <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">Explore <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" /></span>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Airport Delivery */}
-      <section className="py-28 border-y border-zinc-100">
+      <section className="py-24 lg:py-32 bg-[#11100f] text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-8">
+              <div className="text-xs font-semibold tracking-[0.22em] uppercase text-white/45 mb-5">Southern California arrival</div>
+              <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-8">
                 {t('home.airports.h2a')}<br />{t('home.airports.h2b')}
               </h2>
-              <p className="text-xl text-zinc-500 font-light mb-12">
+              <p className="text-xl text-white/55 font-light mb-12">
                 {t('home.airports.desc')}
               </p>
               <div className="space-y-0">
@@ -383,24 +349,25 @@ export function Home() {
                   <Link
                     key={i}
                     to={`/airport-${a.slug}`}
-                    className="flex items-center gap-6 py-5 border-b border-zinc-100 last:border-0 group hover:bg-zinc-50 transition-colors -mx-2 px-2"
+                    className="flex items-center gap-6 py-5 border-b border-white/10 last:border-0 group hover:bg-white/5 transition-colors -mx-2 px-2"
                   >
-                    <div className="w-14 h-14 bg-zinc-50 flex items-center justify-center text-xs font-medium tracking-widest text-zinc-400 flex-shrink-0">
+                    <div className="w-14 h-14 border border-white/20 flex items-center justify-center text-xs font-medium tracking-widest text-white/55 flex-shrink-0">
                       {a.code}
                     </div>
                     <div className="font-medium flex-1">{a.name}</div>
-                    <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 text-white/35 group-hover:text-white group-hover:translate-x-1 transition-all" />
                   </Link>
                 ))}
               </div>
             </div>
-            <div className="aspect-square bg-zinc-50 relative p-12 flex flex-col justify-between">
-              <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'radial-gradient(circle at 2px 2px, black 1px, transparent 0)', backgroundSize: '32px 32px' }} />
-              <MapPin className="w-12 h-12 text-zinc-300" strokeWidth={1} />
+            <div className="aspect-[4/5] lg:aspect-square relative p-10 lg:p-12 flex flex-col justify-between overflow-hidden border border-white/10">
+              <img src="/images/glcsilver.jpeg" alt="Mercedes-Benz airport delivery in Southern California" className="absolute inset-0 h-full w-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-black/10" />
+              <MapPin className="relative z-10 w-12 h-12 text-white/70" strokeWidth={1} />
               <div className="relative z-10">
-                <div className="text-xs font-medium tracking-widest uppercase mb-4 text-zinc-400">{t('home.airports.process.eyebrow')}</div>
-                <h3 className="text-3xl font-medium tracking-tight mb-4">{t('home.airports.process.h3')}</h3>
-                <p className="text-zinc-500 font-light text-sm leading-relaxed">
+                <div className="text-xs font-semibold tracking-[0.2em] uppercase mb-4 text-white/55">{t('home.airports.process.eyebrow')}</div>
+                <h3 className="font-display text-4xl tracking-tight mb-4">{t('home.airports.process.h3')}</h3>
+                <p className="text-white/65 font-light text-sm leading-relaxed">
                   {t('home.airports.process.desc')}
                 </p>
               </div>
@@ -410,11 +377,12 @@ export function Home() {
       </section>
 
       {/* Service Areas */}
-      <section className="py-28 bg-zinc-50">
+      <section className="py-24 lg:py-32 bg-zinc-950 text-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="mb-16">
-            <h2 className="text-4xl lg:text-5xl font-medium tracking-tight mb-4">{t('home.cities.h2')}</h2>
-            <p className="text-zinc-500 font-light text-lg max-w-md">
+            <div className="text-xs font-semibold tracking-[0.22em] uppercase text-white/45 mb-5">Los Angeles · Orange County · Inland Empire</div>
+            <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-5">{t('home.cities.h2')}</h2>
+            <p className="text-white/55 font-light text-lg max-w-md">
               {t('home.cities.desc')}
             </p>
           </div>
@@ -423,10 +391,10 @@ export function Home() {
               <Link
                 key={city.slug}
                 to={`/van-rental-${city.slug}`}
-                className="group bg-white border border-zinc-200 hover:border-zinc-400 transition-colors p-6 flex items-center justify-between"
+                className="group border border-white/15 hover:border-[#e7a77a] hover:bg-white/5 transition-colors p-6 flex items-center justify-between"
               >
                 <span className="font-medium">{city.name}</span>
-                <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-zinc-900 group-hover:translate-x-1 transition-all" />
+                <ArrowRight className="w-4 h-4 text-white/30 group-hover:text-[#e7a77a] group-hover:translate-x-1 transition-all" />
               </Link>
             ))}
           </div>
