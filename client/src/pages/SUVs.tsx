@@ -53,6 +53,21 @@ export function SUVs() {
             ))}
           </div>
 
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-[#2a1f1a] text-white p-8 lg:p-12 mb-6">
+            <Link to="/mercedes-gle-2025" className="block aspect-[4/3] overflow-hidden bg-zinc-900 group">
+              <img src="/images/gle-2025/front-sunset.jpg" alt="2025 Mercedes-Benz GLE 350 4MATIC" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            </Link>
+            <div>
+              <div className="text-xs font-medium tracking-widest uppercase text-[#e7a77a] mb-4">New to the fleet · 2025</div>
+              <h2 className="font-display text-4xl lg:text-5xl tracking-tight mb-6">Mercedes-Benz GLE 350 4MATIC</h2>
+              <p className="text-white/65 font-light leading-relaxed mb-8">A premium all-wheel-drive SUV with a 360° camera, adaptive cruise control, soft-close doors, and heated and ventilated front seats.</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/mercedes-gle-2025" className="inline-flex items-center bg-white text-zinc-950 text-sm font-medium px-6 py-3 hover:bg-zinc-200 transition-colors">Explore the 2025 GLE</Link>
+                <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-white/30 text-white text-sm font-medium px-6 py-3 hover:border-white transition-colors">Check availability</a>
+              </div>
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-zinc-950 text-white p-8 lg:p-12 mb-20">
             <Link to="/mercedes-gle" className="block aspect-[4/3] overflow-hidden bg-zinc-900 group">
               <img src="/images/gle-front.jpg" alt="2022 Mercedes-Benz GLE 350" className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" />

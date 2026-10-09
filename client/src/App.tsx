@@ -3,6 +3,7 @@ import { Home } from './pages/Home'
 import { Vans } from './pages/Vans'
 import { SUVs } from './pages/SUVs'
 import { MercedesGLE } from './pages/MercedesGLE'
+import { MercedesGLE2025 } from './pages/MercedesGLE2025'
 import { Hybrid } from './pages/Hybrid'
 import { Contact } from './pages/Contact'
 import { Reviews } from './pages/Reviews'
@@ -27,6 +28,7 @@ export function App() {
         <Route path="/vans" element={<Vans />} />
         <Route path="/suvs" element={<SUVs />} />
         <Route path="/mercedes-gle" element={<MercedesGLE />} />
+        <Route path="/mercedes-gle-2025" element={<MercedesGLE2025 />} />
         <Route path="/hybrid" element={<Hybrid />} />
         <Route path="/delivery" element={<Delivery />} />
         <Route path="/contact" element={<Contact />} />

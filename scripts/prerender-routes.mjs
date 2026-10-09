@@ -67,7 +67,7 @@ const staticRoutes = [
             ['Where can I rent a Mercedes-Benz GLC or GLE in Southern California?', 'The Van Rental offers Mercedes-Benz GLC and GLE SUV rentals in Brea and serves Los Angeles, Orange County, and surrounding Southern California cities.'],
             ['Does The Van Rental deliver vehicles to Southern California airports?', 'Yes. Airport delivery is available for LAX, John Wayne Airport (SNA), Ontario International Airport (ONT), and Long Beach Airport (LGB).'],
             ['How do I book a vehicle?', 'Choose a vehicle on thevanrental.com and continue to the linked Turo listing or the official Turo host profile to confirm current pricing and availability.'],
-            ['What vehicles are available?', 'The fleet includes Mercedes-Benz GLC and GLE SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.'],
+            ['What vehicles are available?', 'The fleet includes a 2025 Mercedes-Benz GLE 350 4MATIC, additional Mercedes-Benz GLC and GLE SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.'],
             ['Is The Van Rental highly rated?', 'The Van Rental is operated by a Turo All-Star Host with a 5.0 rating, 579 reviews, and 638 completed trips as reported on the linked Turo host profile.'],
           ].map(([name, text]) => ({ '@type': 'Question', name, acceptedAnswer: { '@type': 'Answer', text } })),
         },
@@ -97,6 +97,12 @@ const staticRoutes = [
     title: '2022 Mercedes-Benz GLE 350 Rental in Brea, CA | The Van Rental',
     description: 'Rent a 2022 Mercedes-Benz GLE 350 in Southern California. Five seats, Apple CarPlay, heated seats, sunroof, parking assistance, and a 360-degree camera.',
     ogImage: `${BASE}/images/gle-front.jpg`,
+  },
+  {
+    route: '/mercedes-gle-2025',
+    title: '2025 Mercedes-Benz GLE 350 4MATIC Rental | The Van Rental',
+    description: 'Rent a 2025 Mercedes-Benz GLE 350 4MATIC in Southern California with all-wheel drive, a 360-degree camera, adaptive cruise control, soft-close doors, and heated and ventilated seats.',
+    ogImage: `${BASE}/images/gle-2025/front-sunset.jpg`,
   },
   {
     route: '/hybrid',
