@@ -82,7 +82,7 @@ export function Home() {
               {t('home.hero.desc')}
             </p>
             <div className="flex flex-wrap items-center gap-3">
-              <Link to="/mercedes-gle" className="bg-[#df7748] text-white hover:bg-[#ca683c] transition-colors h-14 px-8 text-sm font-semibold tracking-wide uppercase flex items-center rounded-full">
+              <Link to="/suvs" className="bg-[#df7748] text-white hover:bg-[#ca683c] transition-colors h-14 px-8 text-sm font-semibold tracking-wide uppercase flex items-center rounded-full">
                 Explore the GLE 350
               </Link>
               <Link to="/suvs" className="border border-white/50 hover:border-white bg-black/10 hover:bg-white/10 transition-colors h-14 px-8 text-sm font-semibold tracking-wide uppercase flex items-center gap-2 rounded-full">
@@ -227,7 +227,7 @@ export function Home() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
                 { to: '/suvs', tag: 'Compact premium SUV', type: 'Mercedes-Benz GLC', desc: 'Refined comfort, confident road manners, and an airport-friendly size.', img: '/images/glcb1.jpeg' },
-                { to: '/mercedes-gle', tag: 'Midsize premium SUV', type: 'Mercedes-Benz GLE 350', desc: 'More space for family weekends, executive trips, and longer California drives.', img: '/images/gle-rear.jpg' },
+                { to: '/suvs', tag: 'Midsize premium SUV', type: 'Mercedes-Benz GLE 350', desc: 'More space for family weekends, executive trips, and longer California drives.', img: '/images/gle-rear.jpg' },
               ].map((vehicle) => (
                 <Link key={vehicle.type} to={vehicle.to} className="relative min-h-[420px] overflow-hidden group block border border-white/10">
                   <img src={vehicle.img} alt={vehicle.type} className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
@@ -388,7 +388,7 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
             <div>
-              <div className="text-xs font-semibold tracking-[0.22em] uppercase text-zinc-500 mb-5">Mercedes-Benz · Toyota</div>
+              <div className="text-xs font-semibold tracking-[0.22em] uppercase text-zinc-500 mb-5">SUVs · Vans · Hybrid</div>
               <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-5">{t('home.fleet.h2')}</h2>
               <p className="text-zinc-600 font-light text-lg max-w-md">
                 {t('home.fleet.desc')}
@@ -399,13 +399,14 @@ export function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {[
               { to: '/mercedes-gle-2025', eyebrow: 'Mercedes-Benz · New 2025', name: 'GLE 350 4MATIC', desc: 'All-wheel-drive confidence, modern driver assistance, and heated and ventilated comfort.', img: '/images/gle-2025/front-sunset.jpg' },
               { to: '/mercedes-gle-white', eyebrow: 'Mercedes-Benz · White on white', name: 'GLE 350', desc: 'Panoramic glass roof, white leather, ventilated seats, premium audio, and ambient lighting.', img: '/images/gle-white/exterior.jpg' },
               { to: '/mercedes-gle', eyebrow: 'Mercedes-Benz · New', name: 'GLE 350', desc: 'Midsize premium comfort, generous space, and refined technology for longer Southern California drives.', img: '/images/gle-front.jpg' },
               { to: '/suvs', eyebrow: t('home.fleet.glc.eyebrow'), name: t('home.fleet.glc.h3'), desc: t('home.fleet.glc.desc'), img: '/images/glcb1.jpeg' },
               { to: '/hybrid', eyebrow: t('home.fleet.highlander.eyebrow'), name: t('home.fleet.highlander.h3'), desc: t('home.fleet.highlander.desc'), img: '/images/highlander.jpeg' },
+              { to: '/vans', eyebrow: 'Mercedes-Benz · Crew Van', name: 'Sprinter Crew', desc: 'A spacious gray Sprinter for crews, group travel, production days, and luggage-heavy airport runs.', img: '/images/crew2.jpeg' },
             ].map((vehicle) => (
               <Link key={vehicle.name} to={vehicle.to} className="group relative min-h-[520px] overflow-hidden text-white block">
                 <img src={vehicle.img} alt={vehicle.name} className="absolute inset-0 h-full w-full object-cover group-hover:scale-105 transition-transform duration-1000" />
