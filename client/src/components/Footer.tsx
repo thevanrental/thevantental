@@ -33,6 +33,7 @@ export function Footer() {
               <Link to="/suvs" className="hover:text-zinc-500 transition-colors">{t('footer.glcSuv')}</Link>
               <Link to="/mercedes-gle" className="hover:text-zinc-500 transition-colors">Mercedes GLE 350</Link>
               <Link to="/mercedes-gle-2025" className="hover:text-zinc-500 transition-colors">2025 GLE 350 4MATIC</Link>
+              <Link to="/mercedes-gle-white" className="hover:text-zinc-500 transition-colors">White GLE 350</Link>
               <Link to="/hybrid" className="hover:text-zinc-500 transition-colors">{t('footer.highlander')}</Link>
               <Link to="/trucks" className="hover:text-zinc-500 transition-colors">{t('footer.silverado')}</Link>
             </div>

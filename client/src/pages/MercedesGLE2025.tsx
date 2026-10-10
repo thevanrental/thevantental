@@ -3,7 +3,7 @@ import { Nav } from '../components/Nav'
 import { Footer } from '../components/Footer'
 import { useSEO } from '../hooks/useSEO'
 
-const TURO_PROFILE = 'https://turo.com/us/en/host/14886572'
+const TURO_LISTING = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3934466'
 
 const features = [
   '4MATIC all-wheel drive',
@@ -61,7 +61,7 @@ export function MercedesGLE2025() {
             </div>
             <div>
               <p className="text-xl text-zinc-500 font-light leading-relaxed mb-8">A polished all-wheel-drive SUV with the cabin comfort and driver-assistance technology to make airport arrivals, client travel, family weekends, and longer drives feel effortless.</p>
-              <a href={TURO_PROFILE} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-zinc-900 text-white h-14 px-8 text-base font-medium hover:bg-zinc-700 transition-colors group">
+              <a href={TURO_LISTING} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 bg-zinc-900 text-white h-14 px-8 text-base font-medium hover:bg-zinc-700 transition-colors group">
                 Check availability <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>

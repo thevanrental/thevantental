@@ -21,7 +21,7 @@ const HOME_FAQS = [
   },
   {
     question: 'What vehicles are available?',
-    answer: 'The fleet includes a 2025 Mercedes-Benz GLE 350 4MATIC, additional Mercedes-Benz GLC and GLE SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.',
+    answer: 'The fleet includes a 2025 Mercedes-Benz GLE 350 4MATIC, a white-on-white Mercedes-Benz GLE 350, additional Mercedes-Benz GLC SUVs, Mercedes-Benz Sprinter vans, a Chevrolet Silverado 1500 LTZ, and a Toyota Grand Highlander Hybrid.',
   },
   {
     question: 'Is The Van Rental highly rated?',
@@ -273,6 +273,34 @@ export function Home() {
         </div>
       </section>
 
+      {/* White Mercedes GLE 350 — panoramic cabin */}
+      <section className="relative min-h-[84svh] overflow-hidden bg-zinc-950 text-white flex items-end">
+        <img
+          src="/images/gle-white/exterior.jpg"
+          alt="White Mercedes-Benz GLE 350 in Southern California"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/35 to-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/20" />
+        <div className="relative z-10 max-w-7xl mx-auto w-full px-6 py-16 lg:py-24">
+          <div className="max-w-2xl">
+            <div className="inline-flex text-[10px] font-semibold tracking-[0.22em] uppercase border border-white/35 px-4 py-2 mb-6">White on white · Premium package</div>
+            <h2 className="font-display text-5xl lg:text-7xl tracking-tight leading-[0.94] mb-6">
+              GLE 350.<br /><span className="italic text-[#e7a77a]">Light-filled luxury.</span>
+            </h2>
+            <p className="text-white/75 font-light text-lg leading-relaxed mb-6 max-w-xl">White exterior, white leather cabin, a panoramic glass roof, ventilated seating, premium audio, and ambient lighting — a bright, composed SUV for Southern California travel.</p>
+            <div className="flex flex-wrap gap-2 mb-9">
+              {['Panoramic roof', 'White leather', 'Ventilated seats', 'Premium audio'].map(item => (
+                <span key={item} className="text-xs font-medium text-white/75 border border-white/25 bg-black/15 px-3 py-1.5">{item}</span>
+              ))}
+            </div>
+            <Link to="/mercedes-gle-white" className="inline-flex items-center gap-2 bg-white text-zinc-950 hover:bg-white/85 transition-colors h-12 px-8 text-sm font-semibold group rounded-full">
+              Explore the white GLE <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Extras */}
       <section className="py-24 lg:py-32 bg-[#11100f] text-white">
         <div className="max-w-7xl mx-auto px-6">
@@ -371,9 +399,10 @@ export function Home() {
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-4">
             {[
               { to: '/mercedes-gle-2025', eyebrow: 'Mercedes-Benz · New 2025', name: 'GLE 350 4MATIC', desc: 'All-wheel-drive confidence, modern driver assistance, and heated and ventilated comfort.', img: '/images/gle-2025/front-sunset.jpg' },
+              { to: '/mercedes-gle-white', eyebrow: 'Mercedes-Benz · White on white', name: 'GLE 350', desc: 'Panoramic glass roof, white leather, ventilated seats, premium audio, and ambient lighting.', img: '/images/gle-white/exterior.jpg' },
               { to: '/mercedes-gle', eyebrow: 'Mercedes-Benz · New', name: 'GLE 350', desc: 'Midsize premium comfort, generous space, and refined technology for longer Southern California drives.', img: '/images/gle-front.jpg' },
               { to: '/suvs', eyebrow: t('home.fleet.glc.eyebrow'), name: t('home.fleet.glc.h3'), desc: t('home.fleet.glc.desc'), img: '/images/glcb1.jpeg' },
               { to: '/hybrid', eyebrow: t('home.fleet.highlander.eyebrow'), name: t('home.fleet.highlander.h3'), desc: t('home.fleet.highlander.desc'), img: '/images/highlander.jpeg' },

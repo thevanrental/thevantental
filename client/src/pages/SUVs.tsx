@@ -12,6 +12,8 @@ const GLC_LISTINGS = [
 ]
 
 const GLE_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3907726'
+const GLE_2025_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3934466'
+const GLE_WHITE_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3925053'
 const GLB_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glb-class/2204008'
 const BMW_URL = 'https://turo.com/us/en/car-rental/united-states/santa-ana-ca/bmw/5-series/3544320'
 
@@ -63,7 +65,22 @@ export function SUVs() {
               <p className="text-white/65 font-light leading-relaxed mb-8">A premium all-wheel-drive SUV with a 360° camera, adaptive cruise control, soft-close doors, and heated and ventilated front seats.</p>
               <div className="flex flex-wrap gap-3">
                 <Link to="/mercedes-gle-2025" className="inline-flex items-center bg-white text-zinc-950 text-sm font-medium px-6 py-3 hover:bg-zinc-200 transition-colors">Explore the 2025 GLE</Link>
-                <a href="https://turo.com/us/en/host/14886572" target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-white/30 text-white text-sm font-medium px-6 py-3 hover:border-white transition-colors">Check availability</a>
+                <a href={GLE_2025_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-white/30 text-white text-sm font-medium px-6 py-3 hover:border-white transition-colors">Book this 4MATIC</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center bg-[#e9e3dc] text-zinc-950 p-8 lg:p-12 mb-6">
+            <Link to="/mercedes-gle-white" className="block aspect-[4/3] overflow-hidden bg-zinc-100 group">
+              <img src="/images/gle-white/exterior.jpg" alt="White Mercedes-Benz GLE 350" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+            </Link>
+            <div>
+              <div className="text-xs font-medium tracking-widest uppercase text-[#a95937] mb-4">White on white · Panoramic roof</div>
+              <h2 className="font-display text-4xl lg:text-5xl tracking-tight mb-6">Mercedes-Benz GLE 350</h2>
+              <p className="text-zinc-600 font-light leading-relaxed mb-8">A bright, fully appointed GLE with a white leather interior, panoramic glass roof, ventilated seating, premium audio, ambient lighting, and a modern digital cockpit.</p>
+              <div className="flex flex-wrap gap-3">
+                <Link to="/mercedes-gle-white" className="inline-flex items-center bg-zinc-950 text-white text-sm font-medium px-6 py-3 hover:bg-zinc-700 transition-colors">Explore the white GLE</Link>
+                <a href={GLE_WHITE_URL} target="_blank" rel="noopener noreferrer" className="inline-flex items-center border border-zinc-400 text-zinc-900 text-sm font-medium px-6 py-3 hover:border-zinc-950 transition-colors">Book this GLE</a>
               </div>
             </div>
           </div>
