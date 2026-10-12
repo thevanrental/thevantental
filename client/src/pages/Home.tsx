@@ -97,6 +97,41 @@ export function Home() {
         </div>
       </section>
 
+      {/* Mercedes GLB — available through Upcar */}
+      <section className="bg-[#f2f1ef] border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-6 py-12 lg:py-16 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-16 items-center">
+          <div className="relative overflow-hidden aspect-[16/10] bg-zinc-200">
+            <img
+              src="/images/mercedes-glb-2023-upcar.jpeg"
+              alt="White 2023 Mercedes-Benz GLB 250 available on Upcar in Brea, California"
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="max-w-xl">
+            <div className="text-[10px] font-bold tracking-[0.22em] uppercase text-[#b85f37] mb-4">
+              Available now · Book on Upcar
+            </div>
+            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight leading-[0.98] text-zinc-950 mb-5">
+              2023 Mercedes-Benz GLB 250
+            </h2>
+            <p className="text-lg text-zinc-600 font-light leading-relaxed mb-6">
+              A compact premium SUV with four seats, an automatic transmission, and easy pickup in Brea. Select your dates and complete the reservation directly on Upcar.
+            </p>
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://www.upcar.ai/car/104504?deeplink=car"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-zinc-950 text-white hover:bg-[#df7748] transition-colors h-14 px-7 text-sm font-semibold uppercase tracking-wide rounded-full group"
+              >
+                Book on Upcar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <span className="text-xs text-zinc-500">You’ll continue to Upcar to choose dates and reserve.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Vehicle management — owner acquisition */}
       <section className="relative overflow-hidden bg-zinc-950 text-white border-y border-zinc-800">
         <div className="absolute -right-24 -top-24 w-96 h-96 rounded-full border-[64px] border-zinc-800/70" />
