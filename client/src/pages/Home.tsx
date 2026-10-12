@@ -127,6 +127,24 @@ export function Home() {
                   Ask how revenue sharing works
                 </a>
               </div>
+              <div className="mt-8 max-w-2xl border-l-2 border-[#df7748] bg-white/[0.04] px-5 py-4">
+                <p className="text-sm text-zinc-300 leading-relaxed">
+                  Looking for another way to rent or list a vehicle? Create an Upcar account through our partner link.
+                </p>
+                <div className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <a
+                    href="https://www.upcar.ai/signup-static?referralCode=ko0b0d"
+                    target="_blank"
+                    rel="sponsored noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-[#df7748] transition-colors group"
+                  >
+                    Explore Upcar <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
+                  <span className="text-[10px] uppercase tracking-[0.14em] text-zinc-500">
+                    Partner link · We may earn a referral commission
+                  </span>
+                </div>
+              </div>
             </div>
 
             <div className="bg-white text-zinc-950 p-8 lg:p-10 shadow-2xl">
