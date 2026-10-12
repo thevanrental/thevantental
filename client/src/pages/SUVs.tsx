@@ -15,7 +15,6 @@ const GLE_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercede
 const GLE_2025_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3934466'
 const GLE_WHITE_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/gle-class/3925053'
 const GLB_URL = 'https://turo.com/us/en/suv-rental/united-states/brea-ca/mercedes-benz/glb-class/2204008'
-const BMW_URL = 'https://turo.com/us/en/car-rental/united-states/santa-ana-ca/bmw/5-series/3544320'
 
 export function SUVs() {
   const { t } = useTranslation()
@@ -136,42 +135,6 @@ export function SUVs() {
               >
                 <img src="/images/glb.jpeg" alt="Mercedes GLB" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </a>
-            </div>
-          </div>
-
-          {/* Partners section */}
-          <div className="border-t border-zinc-100 pt-16 mt-16">
-            <div className="mb-12">
-              <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-4">Our Partners</div>
-              <h2 className="text-3xl font-medium tracking-tight mb-3">More options, same standard.</h2>
-              <p className="text-zinc-500 font-light max-w-xl">
-                Through our partner network we can arrange additional premium vehicles. Book directly on Turo.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <a
-                href={BMW_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="block aspect-video bg-zinc-50 overflow-hidden group"
-              >
-                <img src="/images/bmw5.jpeg" alt="BMW 5 Series" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              </a>
-              <div>
-                <div className="text-xs font-medium tracking-widest uppercase text-zinc-400 mb-4">{t('suvs.bmw.eyebrow')}</div>
-                <h3 className="text-3xl font-medium tracking-tight mb-6">{t('suvs.bmw.h2')}</h3>
-                <p className="text-zinc-500 font-light leading-relaxed mb-8">
-                  {t('suvs.bmw.desc')}
-                </p>
-                <a
-                  href={BMW_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 bg-zinc-900 text-white text-sm font-medium px-6 py-3 hover:bg-zinc-700 transition-colors"
-                >
-                  {t('suvs.bmw.book')}
-                </a>
-              </div>
             </div>
           </div>
 

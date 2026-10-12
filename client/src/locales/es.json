@@ -185,12 +185,6 @@
       "eyebrow": "SUV Compacto",
       "h2": "Mercedes GLB",
       "desc": "El GLB ofrece el mismo refinamiento de Mercedes en un paquete más compacto y ágil. Perfecto para conducción urbana, traslados al aeropuerto y viajes ejecutivos cuando se prefiere menor tamaño. Toca la foto para reservar en Turo."
-    },
-    "bmw": {
-      "eyebrow": "Sedán de Lujo",
-      "h2": "BMW Serie 5",
-      "desc": "El BMW Serie 5 aporta refinamiento ejecutivo a cada trayecto. Suave, preciso e inconfundiblemente premium — ideal para viajes de negocios, recogidas de clientes y traslados al aeropuerto en el sur de California.",
-      "book": "Reservar BMW Serie 5 en Turo"
     }
   },
   "hybrid": {

@@ -185,12 +185,6 @@
       "eyebrow": "SUV Compact",
       "h2": "Mercedes GLB",
       "desc": "Le GLB offre le même raffinement Mercedes dans un format plus compact et agile. Parfait pour la conduite en ville, les transferts aéroport et les déplacements professionnels quand un gabarit réduit est préféré. Appuyez sur la photo pour réserver sur Turo."
-    },
-    "bmw": {
-      "eyebrow": "Berline de Luxe",
-      "h2": "BMW Série 5",
-      "desc": "La BMW Série 5 apporte un raffinement de classe exécutive à chaque trajet. Fluide, précise et incontestablement premium — idéale pour les voyages d'affaires, les transferts clients et les navettes aéroport en Californie du Sud.",
-      "book": "Réserver la BMW Série 5 sur Turo"
     }
   },
   "hybrid": {
